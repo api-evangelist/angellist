@@ -1,0 +1,1455 @@
+{
+    "id": "ebe7b6b7caceeb09588e329ce412683d",
+    "name": "AngelList",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "6b50bb404d08dcad39fa921a4904cfd3",
+            "name": "Get Accreditation",
+            "url": "httpsapi.angel.co\/1\/\/accreditation",
+            "description": "Pulls the accreditation for a startup and users.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "06182e2f9d93643d9663125605c3b8f6",
+            "name": "Get Comments",
+            "url": "httpsapi.angel.co\/1\/\/comments",
+            "description": "Pulls the comments for given object.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "commentable_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "commentable_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "c17f0902c132eb906ccc104fff2b72fe",
+            "name": "Add Comment",
+            "url": "httpsapi.angel.co\/1\/\/comments",
+            "description": "Adds a comment for given object",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "comment",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "commentable_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "commentable_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb745177eff0aa82d577a10a11b1a260",
+            "name": "Delete Comment",
+            "url": "httpsapi.angel.co\/1\/\/comments\/{comment_id}",
+            "description": "Deletes a comment for given object",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "comment_id",
+                    "description": "The comment id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "d3039bafccd9b5d613b916cc47be6a30",
+            "name": "Delete Follow",
+            "url": "httpsapi.angel.co\/1\/\/follows",
+            "description": "Delete the follow for given user or startup.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "396f4a6cca9de3efaad9886c15919e0b",
+            "name": "Add Follow",
+            "url": "httpsapi.angel.co\/1\/\/follows",
+            "description": "Add a follow for user or startup on AngelList.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "06f7f7a1bb6ee059aa2a04ea8209f385",
+            "name": "Get Batch of Follows",
+            "url": "httpsapi.angel.co\/1\/\/follows\/batch",
+            "description": "Returns a batched lists of follows",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ids",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "3ad586433114c682d420d39144b28674",
+            "name": "Get Follows Relationship",
+            "url": "httpsapi.angel.co\/1\/\/follows\/relationship",
+            "description": "Gets the relationships for followers",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "source_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "target_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "target_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "8499356bc0755ffd6c4807d85fa8a434",
+            "name": "Get Jobs",
+            "url": "httpsapi.angel.co\/1\/\/jobs",
+            "description": "Get jobs.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "1dd1bc81b1c98bcaa2439ac7baba6841",
+            "name": "Get Job",
+            "url": "httpsapi.angel.co\/1\/\/jobs\/{job_id}",
+            "description": "Get job.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "job_id",
+                    "description": "The id for the job.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "f970facca5ae681c4bcb6a34d056d56c",
+            "name": "Add Like",
+            "url": "httpsapi.angel.co\/1\/\/like",
+            "description": "Add like.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "likable_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "likable_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "947e6f981534c22e93af4035ca3f0fec",
+            "name": "Get Likes",
+            "url": "httpsapi.angel.co\/1\/\/likes",
+            "description": "Get likes",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "likable_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "likable_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "554e34a7a15fbc831a6b5bafaa350b19",
+            "name": "Add Like",
+            "url": "httpsapi.angel.co\/1\/\/likes",
+            "description": "Add Like",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "likable_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "likable_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "c4473733d534fc21245eec525dc64590",
+            "name": "Delete Like",
+            "url": "httpsapi.angel.co\/1\/\/likes\/{like_id}",
+            "description": "Delete Like",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "likable_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "like_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "129af5662ccc1a03a07e9ca50cd847ef",
+            "name": "Get Me",
+            "url": "httpsapi.angel.co\/1\/\/me",
+            "description": "Get Me",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd6f6c30d1f31aa8916b5ad49c548c58",
+            "name": "Get Press",
+            "url": "httpsapi.angel.co\/1\/\/press",
+            "description": "Get Press",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "67fab834b1a0abf5a39d92af1107ff5d",
+            "name": "Get Press",
+            "url": "httpsapi.angel.co\/1\/\/press\/{press_id}",
+            "description": "Get Press",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "press_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb6582a68460dd2fe9cca9270d3914cd",
+            "name": "Get Reviews",
+            "url": "httpsapi.angel.co\/1\/\/reviews",
+            "description": "Get Reviews",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "ec7af7f6a3e4d0b577663d5c40356422",
+            "name": "Get Review",
+            "url": "httpsapi.angel.co\/1\/\/reviews\/{review_id}",
+            "description": "Get Review",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "review_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "76043789aefbd10f134112012fa74ae3",
+            "name": "Search AngelList",
+            "url": "httpsapi.angel.co\/1\/\/search",
+            "description": "Search AngelList.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "980d04dffd32dcd4e2073daf53b1c504",
+            "name": "Search Slugs",
+            "url": "httpsapi.angel.co\/1\/\/search\/slugs",
+            "description": "Search by slug",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "89de76fedd592a3e5ee6bcf3b9b30676",
+            "name": "Search Startups",
+            "url": "httpsapi.angel.co\/1\/\/startups",
+            "description": "Search Startups",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filter",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "3bf637bb51db06a9bfa54c047716df4a",
+            "name": "Get Startup",
+            "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}",
+            "description": "Get Startup",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "6ab0372e39c2f0d78353b0173279b36a",
+            "name": "Get Startup Comments",
+            "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/comments",
+            "description": "Get Startup Comments",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "83b567359d042c6d689a281191603fb6",
+            "name": "Get Startup Followers",
+            "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/followers",
+            "description": "Get Startup Followers",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "5f4e6f67b7f10e08618ed4fa970f0ae6",
+            "name": "Get Startup Followers IDs",
+            "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/followers\/ids",
+            "description": "Get Startup Followers IDs",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "1ed5658a3bb46f5c58e33b134c49ccc1",
+            "name": "Get Startup Roles",
+            "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/roles",
+            "description": "Get Startup Roles",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b1272d90b6a71fe59b14d3601870dc1",
+            "name": "Get Startup Roles",
+            "url": "httpsapi.angel.co\/1\/\/startup_roles",
+            "description": "Get Startup Roles",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "v",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "9444c93b627d370e1d59e4e76d1b0ef7",
+            "name": "Get Status Updates",
+            "url": "httpsapi.angel.co\/1\/\/status_updates",
+            "description": "Get Status Updates",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "f40b53f0b53b0760d788547b7148fbd8",
+            "name": "Add Status Update",
+            "url": "httpsapi.angel.co\/1\/\/status_updates",
+            "description": "Add Status Update",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "message",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "29a2994cedbd9502ce560fe0d42d9583",
+            "name": "Delete Status Update",
+            "url": "httpsapi.angel.co\/1\/\/status_updates\/{status_update_id}",
+            "description": "Delete Status Update",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "message",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startup_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status_update_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "c24904879d920ed969e36874df0a4a9b",
+            "name": "Get Tag",
+            "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}",
+            "description": "Get Tag",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "67be7902d1be2b78f4e0d8e988bd7c58",
+            "name": "Get Tags Children",
+            "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/children",
+            "description": "Get Tags Children",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "af33c5fce01d6fe750ba0e202dbf9087",
+            "name": "Get Jobs by Tag",
+            "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/jobs",
+            "description": "Get Jobs by Tag",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "b2e747e4e92968649f624393a8f0d691",
+            "name": "Get Tag Parents",
+            "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/parents",
+            "description": "Get Tag Parents",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "0835d29e5b1566ec82c117a0b1dcbf12",
+            "name": "Get Startups by Tag",
+            "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/startups",
+            "description": "Get Startups by Tag",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "80f21dd9aebc725887c52e805bafd6fb",
+            "name": "Get Users by Tag",
+            "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/users",
+            "description": "Get Users by Tag",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "505bd77d1f5a7f95b7fd3e087e70cdf1",
+            "name": "User Search",
+            "url": "httpsapi.angel.co\/1\/\/users\/search",
+            "description": "User Search",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "slug",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "e08469f388fbcacdbd078049f298528d",
+            "name": "Get User",
+            "url": "httpsapi.angel.co\/1\/\/users\/{user_id}",
+            "description": "Get User",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "61d4b30122a5b48dc6150b799f68af85",
+            "name": "Get User Followers",
+            "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/followers",
+            "description": "Get User Followers",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "33dc75d947fc760e05973e72a7c79010",
+            "name": "Get User Follower IDs",
+            "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/followers\/ids",
+            "description": "Get User Follower IDs",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "f2ac9712a1798e5a214e04576517198f",
+            "name": "Get Users Following",
+            "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/following",
+            "description": "Get Users Following",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        },
+        {
+            "id": "03bf5842cb6667f0f5fe1cb40f174244",
+            "name": "Get User Following IDs",
+            "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/following\/ids",
+            "description": "Get User Following IDs",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ebe7b6b7caceeb09588e329ce412683d",
+            "rawModeData": ""
+        }
+    ]
+}
