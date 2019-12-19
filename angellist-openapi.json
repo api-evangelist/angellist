@@ -1,0 +1,1333 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v1",
+        "title": "AngelList",
+        "description": "The AngelList API provides developers with a RESTful interface to the AngelList data set. For more information, read the OAuth FAQ.",
+        "termsOfService": "https:\/\/angel.co\/terms"
+    },
+    "servers": [
+        "httpsapi.angel.co\/1\/"
+    ],
+    "paths": {
+        "\/accreditation": {
+            "get": {
+                "summary": "Get Accreditation",
+                "description": "Pulls the accreditation for a startup and users.",
+                "operationId": "Accreditation",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/comments": {
+            "get": {
+                "summary": "Get Comments",
+                "description": "Pulls the comments for given object.",
+                "operationId": "Comments",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "commentable_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "commentable_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Add Comment",
+                "description": "Adds a comment for given object",
+                "operationId": "Comment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "comment",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "commentable_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "commentable_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/comments\/{comment_id}": {
+            "delete": {
+                "summary": "Delete Comment",
+                "description": "Deletes a comment for given object",
+                "operationId": "Comment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "comment_id",
+                        "in": "path",
+                        "description": "The comment id."
+                    }
+                ]
+            }
+        },
+        "\/follows": {
+            "delete": {
+                "summary": "Delete Follow",
+                "description": "Delete the follow for given user or startup.",
+                "operationId": "Follows",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Add Follow",
+                "description": "Add a follow for user or startup on AngelList.",
+                "operationId": "Follows",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/follows\/batch": {
+            "get": {
+                "summary": "Get Batch of Follows",
+                "description": "Returns a batched lists of follows",
+                "operationId": "FollowsBatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/follows\/relationship": {
+            "get": {
+                "summary": "Get Follows Relationship",
+                "description": "Gets the relationships for followers",
+                "operationId": "FollowsRelationship",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "source_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "target_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "target_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/jobs": {
+            "get": {
+                "summary": "Get Jobs",
+                "description": "Get jobs.",
+                "operationId": "Jobs",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/jobs\/{job_id}": {
+            "get": {
+                "summary": "Get Job",
+                "description": "Get job.",
+                "operationId": "Job",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "job_id",
+                        "in": "path",
+                        "description": "The id for the job."
+                    }
+                ]
+            }
+        },
+        "\/like": {
+            "post": {
+                "summary": "Add Like",
+                "description": "Add like.",
+                "operationId": "Like",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "likable_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "likable_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/likes": {
+            "get": {
+                "summary": "Get Likes",
+                "description": "Get likes",
+                "operationId": "Likes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "likable_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "likable_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Add Like",
+                "description": "Add Like",
+                "operationId": "Likes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "likable_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "likable_type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/likes\/{like_id}": {
+            "delete": {
+                "summary": "Delete Like",
+                "description": "Delete Like",
+                "operationId": "Likes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "likable_type",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "like_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/me": {
+            "get": {
+                "summary": "Get Me",
+                "description": "Get Me",
+                "operationId": "Me",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/press": {
+            "get": {
+                "summary": "Get Press",
+                "description": "Get Press",
+                "operationId": "Press",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/press\/{press_id}": {
+            "get": {
+                "summary": "Get Press",
+                "description": "Get Press",
+                "operationId": "Press",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "press_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/reviews": {
+            "get": {
+                "summary": "Get Reviews",
+                "description": "Get Reviews",
+                "operationId": "Reviews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/reviews\/{review_id}": {
+            "get": {
+                "summary": "Get Review",
+                "description": "Get Review",
+                "operationId": "Reviews",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "review_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/search": {
+            "get": {
+                "summary": "Search AngelList",
+                "description": "Search AngelList.",
+                "operationId": "Search",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/search\/slugs": {
+            "get": {
+                "summary": "Search Slugs",
+                "description": "Search by slug",
+                "operationId": "Search",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startups": {
+            "get": {
+                "summary": "Search Startups",
+                "description": "Search Startups",
+                "operationId": "Startups",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startups\/{startup_id}": {
+            "get": {
+                "summary": "Get Startup",
+                "description": "Get Startup",
+                "operationId": "Startups",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startups\/{startup_id}\/comments": {
+            "get": {
+                "summary": "Get Startup Comments",
+                "description": "Get Startup Comments",
+                "operationId": "StartupComments",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startups\/{startup_id}\/followers": {
+            "get": {
+                "summary": "Get Startup Followers",
+                "description": "Get Startup Followers",
+                "operationId": "StartupFollowers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startups\/{startup_id}\/followers\/ids": {
+            "get": {
+                "summary": "Get Startup Followers IDs",
+                "description": "Get Startup Followers IDs",
+                "operationId": "StartupFollowersIDs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startups\/{startup_id}\/roles": {
+            "get": {
+                "summary": "Get Startup Roles",
+                "description": "Get Startup Roles",
+                "operationId": "StartupRoles",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/startup_roles": {
+            "get": {
+                "summary": "Get Startup Roles",
+                "description": "Get Startup Roles",
+                "operationId": "1StartupRoles",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "v",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/status_updates": {
+            "get": {
+                "summary": "Get Status Updates",
+                "description": "Get Status Updates",
+                "operationId": "1StatusUpdates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Add Status Update",
+                "description": "Add Status Update",
+                "operationId": "StatusUpdate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/status_updates\/{status_update_id}": {
+            "delete": {
+                "summary": "Delete Status Update",
+                "description": "Delete Status Update",
+                "operationId": "StatusUpdate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "startup_id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "status_update_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag_id}": {
+            "get": {
+                "summary": "Get Tag",
+                "description": "Get Tag",
+                "operationId": "Tags",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag_id}\/children": {
+            "get": {
+                "summary": "Get Tags Children",
+                "description": "Get Tags Children",
+                "operationId": "TagsChildren",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag_id}\/jobs": {
+            "get": {
+                "summary": "Get Jobs by Tag",
+                "description": "Get Jobs by Tag",
+                "operationId": "Jobs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag_id}\/parents": {
+            "get": {
+                "summary": "Get Tag Parents",
+                "description": "Get Tag Parents",
+                "operationId": "TagParents",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag_id}\/startups": {
+            "get": {
+                "summary": "Get Startups by Tag",
+                "description": "Get Startups by Tag",
+                "operationId": "TagStartups",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/tags\/{tag_id}\/users": {
+            "get": {
+                "summary": "Get Users by Tag",
+                "description": "Get Users by Tag",
+                "operationId": "TagUsers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/search": {
+            "get": {
+                "summary": "User Search",
+                "description": "User Search",
+                "operationId": "Users",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "query",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}": {
+            "get": {
+                "summary": "Get User",
+                "description": "Get User",
+                "operationId": "User",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followers": {
+            "get": {
+                "summary": "Get User Followers",
+                "description": "Get User Followers",
+                "operationId": "UserFollowers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/followers\/ids": {
+            "get": {
+                "summary": "Get User Follower IDs",
+                "description": "Get User Follower IDs",
+                "operationId": "Users",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/following": {
+            "get": {
+                "summary": "Get Users Following",
+                "description": "Get Users Following",
+                "operationId": "UsersFollowing",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/following\/ids": {
+            "get": {
+                "summary": "Get User Following IDs",
+                "description": "Get User Following IDs",
+                "operationId": "UserFollowingIDs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "error": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "gadget": {
+                        "description": "",
+                        "type": "delete"
+                    }
+                }
+            },
+            "accreditation": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "comments": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "delete"
+                    }
+                }
+            },
+            "followed": {
+                "type": "object",
+                "properties": {
+                    "angellist_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "bio": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "followed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "follower_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "image": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "jobs": {
+                "type": "object",
+                "properties": {
+                    "job_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "angellist_url": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "bio": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "follower_count": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "image": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": "delete"
+                    }
+                }
+            },
+            "me": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "bio": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "follower_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "angellist_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "image": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blog_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "online_bio_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "twitter_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "facebook_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "linkedin_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "aboutme_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "github_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "dribbble_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "behance_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resume_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "what_ive_built": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "what_i_do": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "criteria": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "locations": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "roles": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "skills": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "investor": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "scopes": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "skills": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tag_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "angellist_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "level": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "press": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "flags": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "image_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "owner_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "posted_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "press": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "snippet": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "relationship_to_reviewer": {
+                "type": "object",
+                "properties": {
+                    "as": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "relationship": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "relationship_to_reviewer": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "reviewer": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "permissions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "search": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pic": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "abilities": {
+                "type": "object",
+                "properties": {
+                    "intro": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "startups_comments": {
+                "type": "object",
+                "properties": {
+                    "Comments": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "users": {
+                "type": "object",
+                "properties": {
+                    "angellist_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "bio": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "follower_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "image": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "users": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ids": {
+                "type": "object",
+                "properties": {
+                    "ids": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "startup": {
+                "type": "object",
+                "properties": {
+                    "angellist_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "community_profile": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "company_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "confirmed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ended_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "follower_count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "hidden": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "high_concept": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "logo_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "product_desc": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "quality": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "role": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "started_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "startup": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "thumb_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "status_updates": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "delete"
+                    },
+                    "status_updates": {
+                        "description": "",
+                        "type": "delete"
+                    }
+                }
+            },
+            "locations": {
+                "type": "object",
+                "properties": {
+                    "angellist_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "display_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "locations": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "tag_type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "all": {
+                "type": "object",
+                "properties": {
+                    "all": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "followers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "investor_followers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "startups": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "children": {
+                "type": "object",
+                "properties": {
+                    "children": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "startups": {
+                "type": "object",
+                "properties": {
+                    "startup_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
