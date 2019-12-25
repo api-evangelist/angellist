@@ -17,8 +17,8 @@
         "startup jobs",
         "startups"
     ],
-    "created": "2019-12-20",
-    "modified": "2019-12-20",
+    "created": "2019-12-25",
+    "modified": "2019-12-25",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/angellist\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -37,6 +37,10 @@
                 {
                     "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/angellist.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/angellist\/master\/angellist-postman-collection.json"
                 },
                 {
                     "type": "x-postman-collecction",
