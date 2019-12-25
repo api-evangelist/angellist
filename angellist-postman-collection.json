@@ -1,5 +1,5 @@
 {
-    "id": "ca55b012044f8b9c2d2f697b46abe138",
+    "id": "8792eaa0a478a81f7ee7a79328dc3c38",
     "name": "AngelList",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e8c7ecd27dc01238fef29d757ca90367",
+            "id": "953829054098d0f1271c46a2b553529f",
             "name": "Get Accreditation",
             "url": "httpsapi.angel.co\/1\/\/accreditation",
             "description": "Pulls the accreditation for a startup and users.",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "f3ed028ecf836a693045718e9b05932a",
+            "id": "3923f626c6ec4c3db58664458f50839f",
             "name": "Get Comments",
             "url": "httpsapi.angel.co\/1\/\/comments",
             "description": "Pulls the comments for given object.",
@@ -67,11 +67,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "01486a9a7b024a87eac3cd32af58b87f",
+            "id": "175c3e28c1b5ef2dfeb47e5576fa299a",
             "name": "Add Comment",
             "url": "httpsapi.angel.co\/1\/\/comments",
             "description": "Adds a comment for given object",
@@ -112,11 +112,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "63e332404219967b4a671605d885f508",
+            "id": "e4937d21b5384e88fad947abaf0bcc38",
             "name": "Delete Comment",
             "url": "httpsapi.angel.co\/1\/\/comments\/{comment_id}",
             "description": "Deletes a comment for given object",
@@ -143,11 +143,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "1a3664b8884ed462f0e687d52180e30c",
+            "id": "e0942ef35e3abd28e7589582d96e2995",
             "name": "Delete Follow",
             "url": "httpsapi.angel.co\/1\/\/follows",
             "description": "Delete the follow for given user or startup.",
@@ -181,11 +181,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "83b617b8bad9271cb3dff7ee18e493a9",
+            "id": "e8da38fc0c1e53f6a75c17af4981e4f6",
             "name": "Add Follow",
             "url": "httpsapi.angel.co\/1\/\/follows",
             "description": "Add a follow for user or startup on AngelList.",
@@ -219,11 +219,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "82e84d1213e778532d6f7a5a1ca53840",
+            "id": "b671303a47c6c1c141c3885f532f604f",
             "name": "Get Batch of Follows",
             "url": "httpsapi.angel.co\/1\/\/follows\/batch",
             "description": "Returns a batched lists of follows",
@@ -250,11 +250,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "5169049385e0d59efa02fbfd66c3a357",
+            "id": "4c3e6e2b26a16ebb2e6f38e18016866a",
             "name": "Get Follows Relationship",
             "url": "httpsapi.angel.co\/1\/\/follows\/relationship",
             "description": "Gets the relationships for followers",
@@ -295,11 +295,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "b80a5cc8463dca5d278282583ac16a2c",
+            "id": "7a8bae9958ad8a3810469f999b029e9d",
             "name": "Get Jobs",
             "url": "httpsapi.angel.co\/1\/\/jobs",
             "description": "Get jobs.",
@@ -318,11 +318,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "d16e9747add50aaf0fbf5f2b9bdc370c",
+            "id": "5c66eb0be48edc1025ca3fa1a0b36392",
             "name": "Get Job",
             "url": "httpsapi.angel.co\/1\/\/jobs\/{job_id}",
             "description": "Get job.",
@@ -349,11 +349,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "ac012b2ec22e81e064e5baf0c5056b41",
+            "id": "3a220f4a6b9e9ba33d7c1561b3c357d1",
             "name": "Add Like",
             "url": "httpsapi.angel.co\/1\/\/like",
             "description": "Add like.",
@@ -387,11 +387,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "74b1aa20e744a135bd67b77ec00db713",
+            "id": "4805b64855571be00b58c003148d1fad",
             "name": "Get Likes",
             "url": "httpsapi.angel.co\/1\/\/likes",
             "description": "Get likes",
@@ -425,11 +425,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "375db6a8d4b58dced2fc622591112b52",
+            "id": "c8d0101e489ee3ae59a7aeea7ffec186",
             "name": "Add Like",
             "url": "httpsapi.angel.co\/1\/\/likes",
             "description": "Add Like",
@@ -463,11 +463,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "a6cc080f10fe62e62473b293029fd3f7",
+            "id": "005165c2e6292cace7ba17685a9c579d",
             "name": "Delete Like",
             "url": "httpsapi.angel.co\/1\/\/likes\/{like_id}",
             "description": "Delete Like",
@@ -501,11 +501,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "7cd359045ac5826e37d19c920496ad5d",
+            "id": "7fa3ef5c1703ba9c1b901e2b0a986142",
             "name": "Get Me",
             "url": "httpsapi.angel.co\/1\/\/me",
             "description": "Get Me",
@@ -524,11 +524,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "75ea5d8c15e6626b40b6c73a6a807223",
+            "id": "608a6d18164e3d9047738754eaf7f101",
             "name": "Get Press",
             "url": "httpsapi.angel.co\/1\/\/press",
             "description": "Get Press",
@@ -555,11 +555,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "dfaad3021d86ec2effec1160a47b679a",
+            "id": "b6cbcee9abad4265a8d9126c8a9cb639",
             "name": "Get Press",
             "url": "httpsapi.angel.co\/1\/\/press\/{press_id}",
             "description": "Get Press",
@@ -593,11 +593,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "7f9395fdb19c7aae9f36381f5475f503",
+            "id": "4eaf3275dbb808e1a65c68136c5b90ba",
             "name": "Get Reviews",
             "url": "httpsapi.angel.co\/1\/\/reviews",
             "description": "Get Reviews",
@@ -624,11 +624,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "163af804b693f7076470c19ed76912c2",
+            "id": "a53b1b7835bfaa0967752b6fa0e8c459",
             "name": "Get Review",
             "url": "httpsapi.angel.co\/1\/\/reviews\/{review_id}",
             "description": "Get Review",
@@ -662,11 +662,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "08d08308e8652d09d20e34cef9ff9c26",
+            "id": "27958679f7f69d73572c6125f1ded97f",
             "name": "Search AngelList",
             "url": "httpsapi.angel.co\/1\/\/search",
             "description": "Search AngelList.",
@@ -700,11 +700,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "c7a6d10a9330be11ffe26f0c671ec41a",
+            "id": "4aa26722be0f930e305d010b9c43e3ad",
             "name": "Search Slugs",
             "url": "httpsapi.angel.co\/1\/\/search\/slugs",
             "description": "Search by slug",
@@ -731,11 +731,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "796110a6b2375457156e678f909f3566",
+            "id": "0359228103eca584e9b53948088c8e1b",
             "name": "Search Startups",
             "url": "httpsapi.angel.co\/1\/\/startups",
             "description": "Search Startups",
@@ -762,11 +762,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "911ee1ee4d395556efde0339b05056ef",
+            "id": "559c9d958ae194530753b54a50e157b0",
             "name": "Get Startup",
             "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}",
             "description": "Get Startup",
@@ -793,11 +793,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "3cd8421f7e9cef9256527b777f60fa65",
+            "id": "fbcdb196ae764028a4f3c29ee1d12d97",
             "name": "Get Startup Comments",
             "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/comments",
             "description": "Get Startup Comments",
@@ -824,11 +824,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "a505ec77d33fa381ef7ae2820df709f8",
+            "id": "33c02f61a20b1c1c78ef9595615dc3f5",
             "name": "Get Startup Followers",
             "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/followers",
             "description": "Get Startup Followers",
@@ -855,11 +855,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "677405e95b9c679c4f84028835764ae3",
+            "id": "0a4abecbc8254a81fdcb4ba9e6ccb711",
             "name": "Get Startup Followers IDs",
             "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/followers\/ids",
             "description": "Get Startup Followers IDs",
@@ -886,11 +886,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "994839d21cd7e7f3cf875d38158f396e",
+            "id": "c57e59db7d9d9f3de5f1ac62f0238e7b",
             "name": "Get Startup Roles",
             "url": "httpsapi.angel.co\/1\/\/startups\/{startup_id}\/roles",
             "description": "Get Startup Roles",
@@ -917,11 +917,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "691cc3e528722d94016909bc8c38645a",
+            "id": "f6f09442d054bd48864fdb0aada01d50",
             "name": "Get Startup Roles",
             "url": "httpsapi.angel.co\/1\/\/startup_roles",
             "description": "Get Startup Roles",
@@ -955,11 +955,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "672e4e78a17944dcfbf1f05c3de50068",
+            "id": "4b510f4656dc3b7d70a340085edde938",
             "name": "Get Status Updates",
             "url": "httpsapi.angel.co\/1\/\/status_updates",
             "description": "Get Status Updates",
@@ -993,11 +993,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "375d0634151cf951670f1a5b560ebbe9",
+            "id": "9e2aef1a580e8bf369a3000fab8be104",
             "name": "Add Status Update",
             "url": "httpsapi.angel.co\/1\/\/status_updates",
             "description": "Add Status Update",
@@ -1031,11 +1031,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "539454a28c3bab765a34a95d50f79f8c",
+            "id": "4ab05b7b04d15144ec98310c1ca29c04",
             "name": "Delete Status Update",
             "url": "httpsapi.angel.co\/1\/\/status_updates\/{status_update_id}",
             "description": "Delete Status Update",
@@ -1076,11 +1076,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "df92c3fe528a701899fa2e7ef66c73ef",
+            "id": "fe389d965a7581f2fa107d55e1c88b6f",
             "name": "Get Tag",
             "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}",
             "description": "Get Tag",
@@ -1107,11 +1107,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "4178a926416fd6b9d9f1fa3d2346dcaa",
+            "id": "d7811a326504769e8ceddaab4b3cb6dd",
             "name": "Get Tags Children",
             "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/children",
             "description": "Get Tags Children",
@@ -1138,11 +1138,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "b581fdb0ed58e24e1fbf1b3cd17c7d42",
+            "id": "a6ab41a6525287ab0dbf4d81f9961d37",
             "name": "Get Jobs by Tag",
             "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/jobs",
             "description": "Get Jobs by Tag",
@@ -1169,11 +1169,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "c55c72bef930fc0ccc965838692e97d9",
+            "id": "04c9c08d5e1e488f139e251f83624343",
             "name": "Get Tag Parents",
             "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/parents",
             "description": "Get Tag Parents",
@@ -1200,11 +1200,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "9f39822a84ef643883fe0db749e9bd96",
+            "id": "468965f9ad4dc17ac5bca26174879ae5",
             "name": "Get Startups by Tag",
             "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/startups",
             "description": "Get Startups by Tag",
@@ -1231,11 +1231,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "a7bc6712b723a1e396543446fc02e6cd",
+            "id": "4459da97f20c1f4fc68c390d4634e397",
             "name": "Get Users by Tag",
             "url": "httpsapi.angel.co\/1\/\/tags\/{tag_id}\/users",
             "description": "Get Users by Tag",
@@ -1262,11 +1262,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "c0d4221d4b420563cdaece1e9b4ca7dd",
+            "id": "36efec2b87f4147182db409cee0ca845",
             "name": "User Search",
             "url": "httpsapi.angel.co\/1\/\/users\/search",
             "description": "User Search",
@@ -1293,11 +1293,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "2fd87a5e80469f81da0f37c809662f65",
+            "id": "667f756c7df36f3dfd787a60737778a8",
             "name": "Get User",
             "url": "httpsapi.angel.co\/1\/\/users\/{user_id}",
             "description": "Get User",
@@ -1324,11 +1324,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "e5c82dec455f020c679ea51459c82d6b",
+            "id": "a763047af664a271536ad5a7f709a941",
             "name": "Get User Followers",
             "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/followers",
             "description": "Get User Followers",
@@ -1355,11 +1355,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "74e11a739607a6894f5f8be07e3100dc",
+            "id": "0d328126568973d13d9a5ef46ea72cbc",
             "name": "Get User Follower IDs",
             "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/followers\/ids",
             "description": "Get User Follower IDs",
@@ -1386,11 +1386,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "eafd7bad5c710c84100859de5bbc313f",
+            "id": "d9a209692775e96557491b415855123e",
             "name": "Get Users Following",
             "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/following",
             "description": "Get Users Following",
@@ -1417,11 +1417,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         },
         {
-            "id": "dff910056435c52e25750da7a2493125",
+            "id": "3b95a3efee41104f2b31d1aa62850ee7",
             "name": "Get User Following IDs",
             "url": "httpsapi.angel.co\/1\/\/users\/{user_id}\/following\/ids",
             "description": "Get User Following IDs",
@@ -1448,7 +1448,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca55b012044f8b9c2d2f697b46abe138",
+            "collectionId": "8792eaa0a478a81f7ee7a79328dc3c38",
             "rawModeData": ""
         }
     ]
