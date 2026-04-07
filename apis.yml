@@ -1,16 +1,14 @@
 aid: angellist
-url: 
-  https://raw.githubusercontent.com/api-evangelist/angellist/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/angellist/refs/heads/main/apis.yml
 apis:
   - aid: angellist:investor-management-api
     name: AngelList Investor Management API
     tags:
-      - Startups
       - Investing
-      - Venture Capital
+      - Startups
       - Transactions
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Venture Capital
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://portal-api.angellist.com/beta
     humanURL: https://docs.angellist.com/docs/overview
     properties:
@@ -29,13 +27,12 @@ apis:
       when transactions are complete.
 name: AngelList
 tags:
-  - Startups
   - Investing
   - Jobs
+  - Startups
   - Venture Capital
 type: Index
-image: 
-  https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
   - url: https://www.angellist.com/
