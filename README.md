@@ -11,24 +11,24 @@ AngelList (https://angel.co/) is a platform for startups, angel investors, and j
 
 ## Tags:
 
- - Startups, Investing, Jobs, Venture Capital
+ - Documents, Funds, Investing, Jobs, Startups, Transactions, Venture Capital
 
 ## Timestamps
 
 - **Created:** 2026-03-24
-- **Modified:** 2026-03-24
+- **Modified:** 2026-04-19
 
 ## APIs
 
 ### AngelList Investor Management API
 
-The AngelList Investor Management API is a GraphQL API that enables programmatic access to the AngelList investor portal, supporting fund managers and investors in managing transactions, documents, and capital flows. With this API, developers can inspect existing transactions for status and metadata, manage entities and organizations, access data rooms and signature files, and receive callbacks when transactions are complete. Authentication is performed via bearer token, and the API is self-documenting through GraphQL introspection. Separate staging and production environments are available for development and testing.
+The AngelList Investor Management API is a GraphQL API that enables programmatic access to the AngelList investor portal, supporting fund managers and investors in managing transactions, documents, and capital flows. With this API, developers can inspect existing transactions for status and metadata, manage entities and organizations, access data rooms and signature files, and receive callbacks when transactions are complete. The API supports a full transaction lifecycle including created, pendingSubmission, submitted, pendingReview, pendingRevision, igo, confirmed, and rejected states. Authentication is performed via bearer token, and the API is self-documenting through GraphQL introspection. Separate staging and production environments are available for development and testing.
 
 **Human URL:** [https://docs.angellist.com/docs/overview](https://docs.angellist.com/docs/overview)
 
 #### Tags:
 
- - Startups, Investing, Venture Capital, Transactions
+ - Documents, Entities, Funds, Investing, Signatures, Startups, Transactions, Venture Capital
 
 #### Properties
 
@@ -44,6 +44,7 @@ The AngelList Investor Management API is a GraphQL API that enables programmatic
 - [GraphQL](https://docs.angellist.com/graphql)
 - [DataModel](https://docs.angellist.com/docs/angellist-data-model)
 - [Documentation](https://support.angellist.com/data-room/integrations/API)
+- [GitHubOrganization](https://github.com/angellist)
 - [TermsOfService](https://venture.angellist.com/terms)
 - [PrivacyPolicy](https://venture.angellist.com/privacy)
 - [Security](https://trust-portal.angellist.com/)
