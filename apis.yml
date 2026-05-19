@@ -49,6 +49,8 @@ type: Index
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/angellist
   - url: https://www.angellist.com/
     name: AngelList Website
     type: Website
