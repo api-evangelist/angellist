@@ -98,7 +98,7 @@ common:
 - url: https://wellfound.com/blog/angellist-talent-is-now-wellfound
   name: AngelList Talent is now Wellfound
   type: Announcement
-- type: LLMsTxt
+- type: LlmsText
   url: https://docs.angellist.com/llms.txt
 created: '2026-03-24'
 modified: '2026-04-19'
