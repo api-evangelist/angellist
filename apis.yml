@@ -51,6 +51,10 @@ type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+- type: VulnerabilityDisclosure
+  url: security/angellist-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/angellist-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/angellist
 - url: https://www.angellist.com/
