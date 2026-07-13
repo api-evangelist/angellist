@@ -3,12 +3,13 @@
   "feeds": [
     {
       "source": "https://www.angellist.com/blog",
-      "feed_url": "",
-      "saved": 1,
-      "method": "agent-scrape"
+      "feed_url": "https://www.angellist.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 1,
-  "fetched": "2026-06-27T12:23:20Z",
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "agent_pulled": "2026-07-04"
 }
