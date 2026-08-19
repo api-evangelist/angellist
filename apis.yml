@@ -118,7 +118,7 @@ common:
   url: https://docs.angellist.com/llms.txt
 created: '2026-03-24'
 modified: '2026-04-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   AngelList provides an investor management GraphQL API that enables fund
   managers and investors to programmatically manage transactions, entities,
