@@ -10,6 +10,15 @@ apis:
   - Investing
   - Signatures
   - Startups
+  - Transaction
+  - Venture Capital
+  tags_raw:
+  - Documents
+  - Entities
+  - Funds
+  - Investing
+  - Signatures
+  - Startups
   - Transactions
   - Venture Capital
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -40,6 +49,14 @@ apis:
     email: ''
 name: AngelList
 tags:
+- Documents
+- Funds
+- Investing
+- Job
+- Startups
+- Transaction
+- Venture Capital
+tags_raw:
 - Documents
 - Funds
 - Investing
