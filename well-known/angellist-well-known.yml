@@ -1,0 +1,272 @@
+generated: '2026-09-02'
+method: searched
+source: live probe of every apis.yml host + the OAuth/OIDC and MCP hosts they redirect to
+note: >-
+  Named-path probe (never a glob). Two AngelList hosts answer 200 with HTML for
+  every /.well-known/* path — www.angellist.com and docs.angellist.com — so a
+  negative-control path was issued on every host and any HTML 200 is recorded
+  with hit: false. Only application/json, text/plain and text/markdown bodies
+  that were actually saved to disk are counted as documents.
+path_echo_control: passed
+soft_404_control:
+  www.angellist.com:
+    url: https://www.angellist.com/apis-io-negative-control-7f3ab91c
+    http_status: 200
+    bytes: 95950
+    verdict: catch-all SPA shell; every /.well-known/* path returns this same body
+  docs.angellist.com:
+    url: https://docs.angellist.com/.well-known/angellist-negative-control-7f3ab91c.json
+    http_status: 200
+    bytes: 31322
+    verdict: >-
+      Mintlify login shell; every docs path 302s to /login?redirect=... . The two
+      OAuth documents below are the exception — they return application/json with
+      distinct bodies and are genuine.
+hit_count: 8
+hosts:
+- host: https://auth.angellist.com
+  role: AngelList OIDC identity provider (client_id=venture)
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: angellist-auth-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: angellist-auth-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/angellist-negcontrol-7f3ab.json
+    status: 404
+- host: https://support.angellist.com
+  role: AngelList Investor Management Help Center (public docs + A2A card)
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: angellist-support-agent-card.json
+  - path: /.well-known/agent-skills/angellist/skill.md
+    status: 200
+    file: ../skills/angellist-investor-management-platform.md
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/angellist-negative-control-7f3ab91c.json
+    status: 404
+- host: https://docs.angellist.com
+  role: AngelList developer documentation (Mintlify; every page now behind a login)
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: angellist-docs-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: angellist-docs-oauth-protected-resource.json
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/security.txt
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/ucp.json
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/acp.json
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+  - path: /.well-known/agent.json
+    status: 200
+    hit: false
+    note: HTML login shell (31322 bytes), not a document
+- host: https://portal-api.angellist.com
+  role: AngelList Investor Management GraphQL API host (baseURL /beta)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/angellist-negative-control-7f3ab91c.json
+    status: 404
+- host: https://venture.angellist.com
+  role: AngelList venture product (legal pages; app behind auth.angellist.com)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/angellist-negative-control-7f3ab91c.json
+    status: 404
+- host: https://www.angellist.com
+  role: AngelList marketing site
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    hit: false
+    note: >-
+      Catch-all SPA 404 shell (~95.9KB of HTML), identical to the
+      negative-control body. NOT a security.txt.
+  - path: /.well-known/openid-configuration
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/api-catalog
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/ucp.json
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/acp.json
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/agent.json
+    status: 200
+    hit: false
+    note: Catch-all SPA 404 shell
+  - path: /.well-known/angellist-negative-control-7f3ab91c.json
+    status: 200
+    hit: false
+    note: The negative control itself. Proves the host is a catch-all.
+- host: https://wellfound.com
+  role: >-
+    Wellfound, the former AngelList Talent business. Listed as a Website in
+    apis.yml, so it is probed here — but its documents describe the Wellfound
+    recruiting product, not AngelList Venture's investor-management API, and no
+    common[] pointer is emitted from them. Recorded, not claimed.
+  ownership_caveat: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: wellfound-security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: wellfound-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: wellfound-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: wellfound-oauth-protected-resource.json
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/angellist-negative-control-7f3ab91c.json
+    status: 404

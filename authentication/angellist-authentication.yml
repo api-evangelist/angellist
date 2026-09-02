@@ -1,0 +1,123 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  https://auth.angellist.com/.well-known/openid-configuration (probed) +
+  https://docs.angellist.com/docs/overview (API key model; docs host now
+  requires a login, values read from its publicly indexed copy)
+docs: https://docs.angellist.com/docs/overview
+note: >-
+  AngelList runs two distinct authentication models. The Investor Management
+  GraphQL API is a bearer API-key API with environment-scoped key prefixes. The
+  AngelList web products (venture.angellist.com, portal.angellist.com) sit
+  behind a first-party OIDC provider at auth.angellist.com that publishes real
+  RFC 8414 / OIDC discovery metadata and supports dynamic client registration.
+  No OpenAPI exists to derive securitySchemes from — the API is GraphQL and its
+  production endpoint has introspection disabled.
+summary:
+  types:
+  - apiKey
+  - openIdConnect
+  - oauth2
+  api_key_in:
+  - header
+  oauth2_flows:
+  - authorizationCode
+  pkce: S256
+  dynamic_client_registration: true
+schemes:
+- name: AngelListApiKey
+  type: apiKey
+  in: header
+  applies_to: AngelList Investor Management API (GraphQL)
+  endpoint: https://portal-api.angellist.com/beta
+  key_prefixes:
+  - prefix: sk_live
+    environment: production
+    endpoint: https://portal-api.angellist.com/beta
+  - prefix: sk_test
+    environment: staging
+    endpoint: https://portal-api-staging.angellist.com/beta
+  provisioning: >-
+    API keys are issued by AngelList on request — email portal@angellist.com for
+    API setup. There is no self-service key page.
+  sources:
+  - https://docs.angellist.com/docs/overview
+- name: AngelListOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://auth.angellist.com/.well-known/openid-configuration
+  issuer: https://auth.angellist.com
+  authorization_endpoint: https://auth.angellist.com/authorize
+  token_endpoint: https://auth.angellist.com/token
+  revocation_endpoint: https://auth.angellist.com/token/revoke
+  end_session_endpoint: https://auth.angellist.com/end-session
+  jwks_uri: https://auth.angellist.com/.well-known/jwks.json
+  registration_endpoint: https://auth.angellist.com/oauth/register
+  id_token_signing_alg_values_supported:
+  - EdDSA
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  response_types_supported:
+  - code
+  code_challenge_methods_supported:
+  - S256
+  token_endpoint_auth_methods_supported:
+  - client_secret_post
+  - none
+  subject_types_supported:
+  - public
+  claims_supported:
+  - sub
+  - iss
+  - aud
+  - exp
+  - iat
+  - auth_time
+  - nonce
+  - acr
+  - amr
+  applies_to: venture.angellist.com, portal.angellist.com (web sign-in)
+  sources:
+  - well-known/angellist-auth-openid-configuration.json
+- name: AngelListDocsMCPOAuth
+  type: oauth2
+  status: advertised
+  issuer: https://docs.angellist.com/mcp/oauth
+  authorization_endpoint: https://docs.angellist.com/mcp/oauth/authorize
+  token_endpoint: https://docs.angellist.com/mcp/oauth/token
+  registration_endpoint: https://docs.angellist.com/mcp/oauth/register
+  grant_types_supported:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+  code_challenge_methods_supported:
+  - S256
+  scopes_supported:
+  - mcp:search
+  applies_to: >-
+    The documentation MCP surface advertised by
+    https://docs.angellist.com/.well-known/oauth-protected-resource. The MCP
+    endpoint itself currently answers 403 "MCP auth is not enabled for this
+    deployment" — see mcp/angellist-mcp.yml.
+  sources:
+  - well-known/angellist-docs-oauth-authorization-server.json
+  - well-known/angellist-docs-oauth-protected-resource.json
+protected_resource_metadata:
+- resource: https://docs.angellist.com
+  authorization_servers:
+  - https://docs.angellist.com/mcp/oauth
+  source: well-known/angellist-docs-oauth-protected-resource.json
+  rfc: RFC 9728
+x-evidence:
+- url: https://auth.angellist.com/.well-known/openid-configuration
+  http_status: 200
+  content_type: application/json
+- url: https://auth.angellist.com/.well-known/oauth-authorization-server
+  http_status: 200
+  content_type: application/json
+- url: https://docs.angellist.com/.well-known/oauth-protected-resource
+  http_status: 200
+  content_type: application/json
+- url: https://docs.angellist.com/docs/overview
+  http_status: 200
+  note: 302s to /login?redirect=%2Fdocs%2Foverview — auth-gated as of 2026-09-02

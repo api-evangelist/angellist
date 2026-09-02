@@ -3,90 +3,49 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
 provider: AngelList
 providerId: angellist
+generated: '2026-09-02'
+method: searched
+source: https://docs.angellist.com/docs/overview
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
-tags:
-  - Documents
-  - Funds
-  - Investing
-  - Jobs
-  - Startups
-  - Transactions
-  - Venture Capital
-  - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the AngelList API surface. Captures per-tier
-  quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to
-  be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - AngelList Investor Management API
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - AngelList Investor Management API
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - AngelList Investor Management API
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - AngelList Investor Management API
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - AngelList Investor Management API
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+modified: '2026-09-02'
+supersedes:
+  method: generated
+  modified: '2026-05-04'
+  reason: >-
+    The previous file was a bulk-sweep scaffold. It declared free / professional
+    / enterprise tiers at 10, 100 and 1,000 requests per minute with monthly
+    quotas, and an X-RateLimit-* header set — none of which AngelList publishes.
+    It said so itself ("Defaults are scaffold values to be replaced with
+    published provider limits"). Replaced 2026-09-02 with an honest zero backed
+    by probes.
+description: >-
+  AngelList publishes no rate limits for the Investor Management API. This is a
+  recorded zero, not an unchecked gap: the developer reference that would carry
+  them now requires a login, the public help center contains no limits page, and
+  no rate-limit response header was observed on any anonymous request to the
+  production GraphQL endpoint.
+limit_count: 0
+limits: []
+headers: {}
+headers_observed: []
+responseCodes: {}
+tags: [Funds, Investing, Venture Capital, Rate Limiting, Quotas, Throttling]
+policies: []
+evidence:
+- url: https://docs.angellist.com/docs/overview
+  http_status: 200
+  note: >-
+    302s to /login?redirect=%2Fdocs%2Foverview — the reference is auth-gated, so
+    any limits it documents are not publicly readable.
+- url: https://portal-api.angellist.com/beta
+  http_status: 200
+  method: POST
+  note: >-
+    Anonymous responses carry no X-RateLimit-*, RateLimit-* or Retry-After
+    header. Only an application-level GraphQL error body was returned.
+- url: https://support.angellist.com/llms.txt
+  http_status: 200
+  note: >-
+    The full public documentation index (71 entries) contains no rate limit,
+    quota or throttling page.
 maintainers: []

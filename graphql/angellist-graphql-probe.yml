@@ -1,0 +1,35 @@
+generated: '2026-09-02'
+method: probed
+source: https://portal-api.angellist.com/beta
+endpoint: https://portal-api.angellist.com/beta
+staging_endpoint: https://portal-api-staging.angellist.com/beta
+reachable: true
+sdl_harvested: false
+introspection:
+  enabled: false
+  gated: true
+  evidence: >-
+    POST of a named IntrospectionQuery returns HTTP 200 with one error per
+    introspection field: "GraphQL introspection has been disabled, but the
+    requested query contained the field \"__schema\"." The schema therefore
+    cannot be captured, and none is authored here.
+observed_behaviour:
+- request: 'GET /beta'
+  http_status: 200
+  body: '{"errors":[{"message":"Must provide query string."}]}'
+- request: 'POST /beta {"query":"{__schema{queryType{name}}}"}'
+  http_status: 400
+  body: >-
+    {"errors":[{"message":"Anonymous operations are not allowed in production.
+    ...","extensions":{"code":"ANONYMOUS_OPERATION"}}]}
+- request: 'POST /beta named IntrospectionQuery'
+  http_status: 200
+  body: introspection disabled errors
+docs:
+  explorer: https://docs.angellist.com/graphql
+  data_model: https://docs.angellist.com/docs/angellist-data-model
+  directory_models: https://docs.angellist.com/page/directory-models/
+  access: >-
+    All three 302 to https://docs.angellist.com/login?redirect=... as of
+    2026-09-02. The schema is documented only behind that login.
+probed: '2026-09-02'

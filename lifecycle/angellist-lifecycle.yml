@@ -1,0 +1,58 @@
+generated: '2026-09-02'
+method: probed
+source: live probes of angellist.com, docs.angellist.com, support.angellist.com and status.angellist.com
+note: >-
+  Recorded absences are deliberate. Each negative below is backed by a URL and
+  the status it returned, so a later sweep can show movement rather than
+  re-probing from zero.
+versioning:
+  scheme: uri-path
+  current: beta
+  evidence: production base URL is https://portal-api.angellist.com/beta
+  docs: null
+  note: >-
+    The API has been at /beta since it was first catalogued. No stable (v1)
+    channel and no version-migration policy is published on any reachable page.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  documented: false
+  note: >-
+    No deprecation or Sunset/Deprecation header policy is published. The
+    reference that might carry one is behind the docs.angellist.com login.
+sla:
+  url: null
+  uptime_target: null
+  documented: false
+status_page:
+  url: null
+  published: false
+  evidence:
+  - url: https://status.angellist.com/
+    http_status: 404
+  - url: https://support.angellist.com/changelog
+    http_status: 404
+changelog:
+  url: null
+  published: false
+  evidence:
+  - url: https://www.angellist.com/company/changelog
+    http_status: 200
+    note: soft-404 — www.angellist.com catch-all shell (~95.9KB), not a changelog
+  - url: https://www.angellist.com/product-updates
+    http_status: 200
+    note: soft-404 — same catch-all shell
+roadmap:
+  url: null
+  published: false
+deprecated_operations: []
+deprecated_operations_note: >-
+  Cannot be derived. There is no OpenAPI in this repo and the GraphQL endpoint
+  has introspection disabled, so @deprecated directives are unreadable.
+product_lifecycle_notes:
+- event: AngelList Talent rebranded to Wellfound
+  url: https://wellfound.com/blog/angellist-talent-is-now-wellfound
+  note: >-
+    The talent business now runs as Wellfound on its own domain with its own
+    identity provider and its own MCP surface. Treated as a separate brand for
+    contract-ownership purposes throughout this repo.

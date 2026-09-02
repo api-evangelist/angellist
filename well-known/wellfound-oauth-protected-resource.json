@@ -1,0 +1,1 @@
+{"resource":"https://wellfound.com/api/mcp","authorization_servers":["https://wellfound.com"],"bearer_methods_supported":["header"],"scopes_supported":["applications:read","applications:accept","applications:reject"],"resource_name":"Wellfound recruiter applications"}

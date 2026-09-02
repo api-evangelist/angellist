@@ -1,0 +1,87 @@
+generated: '2026-09-02'
+method: probed
+status: advertised-unreachable
+source: https://docs.angellist.com/.well-known/oauth-protected-resource
+note: >-
+  AngelList's documentation host advertises an MCP surface — it serves RFC 9728
+  protected-resource metadata naming https://docs.angellist.com as the resource
+  and https://docs.angellist.com/mcp/oauth as its authorization server, and that
+  authorization server publishes a full RFC 8414 document with an mcp:search
+  scope and a dynamic-client-registration endpoint. The MCP endpoint itself does
+  not answer. Every request to https://docs.angellist.com/mcp — GET, POST
+  initialize, and POST tools/list — returns HTTP 403 with the body
+  {"error":"Failed to fetch authenticated MCP config: MCP auth is not enabled
+  for this deployment","status":403}. That is a deployment error, not an OAuth
+  challenge: no WWW-Authenticate header is returned and no token would change
+  the outcome. NO MCPServer pointer is emitted in apis.yml, because an agent
+  cannot reach this server today.
+deployment:
+  mode: remote
+  endpoint: https://docs.angellist.com/mcp
+  auth: oauth
+  verified: probed
+  reachable: false
+  note: >-
+    mode is remote because the only thing AngelList publishes is an https URL an
+    MCP client would POST to. No stdio package, npx command or MCP repository
+    exists for AngelList in any registry checked (npm, PyPI, RubyGems).
+oauth:
+  issuer: https://docs.angellist.com/mcp/oauth
+  authorization_endpoint: https://docs.angellist.com/mcp/oauth/authorize
+  token_endpoint: https://docs.angellist.com/mcp/oauth/token
+  registration_endpoint: https://docs.angellist.com/mcp/oauth/register
+  scopes_supported:
+  - mcp:search
+  code_challenge_methods_supported:
+  - S256
+  grant_types_supported:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+tools: []
+tools_note: >-
+  tools/list could not be read (403). No tool list is published anywhere else —
+  the AngelList llms.txt at support.angellist.com is a documentation index, not
+  a tool manifest — so no candidate tools are derived. The Investor Management
+  API is GraphQL with introspection disabled and there is no OpenAPI in this
+  repo to derive candidate tools from.
+related_surfaces:
+- host: https://wellfound.com
+  endpoint: https://wellfound.com/api/mcp
+  status: deployed
+  auth: oauth
+  http_status_on_tools_list: 401
+  body: '{"error":"invalid_token","error_description":"You must pass in an access token when making this request."}'
+  resource_name: Wellfound recruiter applications
+  scopes_supported:
+  - applications:read
+  - applications:accept
+  - applications:reject
+  ownership_caveat: >-
+    This is a genuinely deployed, OAuth-protected MCP server, but it belongs to
+    Wellfound — the former AngelList Talent business, which operates as its own
+    brand on its own domain with its own security.txt and its own identity
+    provider (issuer https://wellfound.com). It serves recruiter application
+    workflows, not AngelList's investor-management products. It is recorded here
+    because wellfound.com is listed as a Website in apis.yml, and it is
+    deliberately NOT wired as an AngelList MCPServer pointer.
+x-evidence:
+- url: https://docs.angellist.com/.well-known/oauth-protected-resource
+  http_status: 200
+  content_type: application/json
+- url: https://docs.angellist.com/.well-known/oauth-authorization-server
+  http_status: 200
+  content_type: application/json
+- url: https://docs.angellist.com/mcp
+  method: POST tools/list
+  http_status: 403
+  body: '{"error":"Failed to fetch authenticated MCP config: MCP auth is not enabled for this deployment","status":403}'
+- url: https://docs.angellist.com/mcp
+  method: POST initialize
+  http_status: 403
+- url: https://support.angellist.com/mcp
+  method: POST tools/list
+  http_status: 500
+- url: https://wellfound.com/api/mcp
+  method: POST tools/list
+  http_status: 401

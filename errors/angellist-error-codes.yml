@@ -1,0 +1,92 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  https://support.angellist.com/investor-help/account/common-errors.md +
+  live probes of https://portal-api.angellist.com/beta
+format: graphql-errors
+note: >-
+  AngelList publishes no HTTP status / problem-type reference — the API is
+  GraphQL and its reference is behind the docs.angellist.com login. Two real
+  sources exist and both are captured: the GraphQL error envelope observed
+  directly on the live endpoint, and the provider's public "Common Errors" page,
+  which is a user-facing error registry with stated remediation. Nothing is
+  invented; there is no RFC 9457 problem+json surface to derive.
+envelope:
+  style: graphql-errors
+  fields:
+  - errors[].message
+  - errors[].locations[]
+  - errors[].extensions.code
+  rfc9457: false
+api_errors:
+- code: ANONYMOUS_OPERATION
+  http_status: 400
+  title: Anonymous operations are not allowed in production
+  message: >-
+    Anonymous operations are not allowed in production. Please provide an
+    operation name, e.g. `query MyQueryName { ... }` or
+    `mutation MyMutationName { ... }`.
+  remediation: Name every operation sent to the production endpoint.
+  observed: '2026-09-02'
+  source: https://portal-api.angellist.com/beta
+- code: null
+  http_status: 200
+  title: Must provide query string
+  message: Must provide query string.
+  remediation: POST a JSON body containing a `query` field.
+  observed: '2026-09-02'
+  source: https://portal-api.angellist.com/beta
+- code: null
+  http_status: 200
+  title: GraphQL introspection has been disabled
+  message: >-
+    GraphQL introspection has been disabled, but the requested query contained
+    the field "__schema".
+  remediation: >-
+    The schema cannot be introspected in production. Use the documentation at
+    docs.angellist.com (login required) or request the schema from
+    portal@angellist.com.
+  observed: '2026-09-02'
+  source: https://portal-api.angellist.com/beta
+platform_errors:
+- title: Server Error
+  meaning: An internal error was raised; an error report is filed automatically.
+  action: >-
+    Clear cache and cookies and reset the URL to https://portal.angellist.com.
+    If it persists, email portal@angellist.com.
+  source: https://support.angellist.com/investor-help/account/common-errors
+- title: You are not a part of an organization
+  meaning: >-
+    Typically the user accepted an email invite intended for a different address
+    than the one they are signed in with.
+  action: >-
+    Reset the URL to https://portal.angellist.com and verify the signed-in email
+    matches the invited email; otherwise email portal@angellist.com.
+  source: https://support.angellist.com/investor-help/account/common-errors
+- title: Invite Expired
+  meaning: >-
+    Email invitations expire after 75 days and cannot be refreshed.
+  action: Ask the sender to issue a new invitation.
+  source: https://support.angellist.com/investor-help/account/common-errors
+- title: You are not the Authorized Signatory
+  meaning: >-
+    The account role is not permitted to sign the transaction.
+  action: >-
+    Email portal@angellist.com to have the role upgraded, or use the Invite
+    button on the transaction to bring in the correct signatory.
+  source: https://support.angellist.com/investor-help/account/common-errors
+transaction_statuses:
+  note: >-
+    Not errors, but the state machine an agent must read before acting. Captured
+    verbatim from the provider's published Agent Skill.
+  source: https://support.angellist.com/.well-known/agent-skills/angellist/skill.md
+  states:
+  - {status: Created, meaning: Investor started via public link, no data entered}
+  - {status: Invited, meaning: Private email invite sent, not yet started}
+  - {status: Pending Investor, meaning: Investor filling out form, not complete}
+  - {status: Submitted, meaning: All info filled and signed, not yet reviewed}
+  - {status: Pending Review, meaning: Fund manager reviewing submission}
+  - {status: Pending Revision, meaning: Investor asked to fix or clarify information}
+  - {status: In Good Order, meaning: Fund manager approved submission}
+  - {status: Confirmed, meaning: Fund manager accepted, process complete}
+  - {status: Rejected, meaning: Terminal negative outcome of finalization}

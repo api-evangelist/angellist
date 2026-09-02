@@ -1,0 +1,67 @@
+generated: '2026-09-02'
+method: searched
+source: registry lookups + https://github.com/angellist
+note: >-
+  No first-party AngelList client library exists in any public registry. This is
+  a recorded negative, not an unchecked gap — every registry below was queried
+  and its HTTP status recorded. AngelList's GitHub organization holds 47 public
+  repositories, and every one of them is either an internal engineering tool or
+  a fork of a third-party Ruby/Go/JS library the company depends on. None wraps
+  the Investor Management API.
+packages: []
+official_sdk_count: 0
+registries_probed:
+- registry: npm
+  query: angellist
+  url: https://registry.npmjs.org/angellist
+  http_status: 200
+  result: '{"error":"Not found"}'
+  version: null
+  published: null
+  note: >-
+    The registry answers 200 with a not-found body — the package name is
+    unclaimed. Checked, nothing to record.
+- registry: npm
+  query: '@angellist/sdk'
+  http_status: 404
+  version: null
+  published: null
+- registry: npm
+  query: angellist-api
+  http_status: 404
+  version: null
+  published: null
+- registry: pypi
+  query: angellist
+  url: https://pypi.org/pypi/angellist/json
+  http_status: 404
+  version: null
+  published: null
+- registry: pypi
+  query: angellist-api
+  http_status: 404
+  version: null
+  published: null
+- registry: rubygems
+  query: angellist
+  url: https://rubygems.org/api/v1/gems/angellist.json
+  http_status: 404
+  version: null
+  published: null
+- registry: rubygems
+  query: angellist-api
+  http_status: 404
+  version: null
+  published: null
+github_organization:
+  url: https://github.com/angellist
+  http_status: 200
+  public_repos: 47
+  first_party_api_clients: 0
+  note: >-
+    Sampled the 40 most recently pushed repositories. Original AngelList work
+    there (arti-oss, zaxcel, werkbook, boba, protip, geoip2-server) is
+    infrastructure and tooling; the remainder are forks of upstream projects
+    (awesome_nested_set, acts-as-taggable-on, makara, money, notion-ruby-client,
+    dropbox_api, sdk-typescript, novel, nixpkgs and similar). No AngelList API
+    SDK is published.

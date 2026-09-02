@@ -1,0 +1,57 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  https://auth.angellist.com/.well-known/openid-configuration and
+  https://docs.angellist.com/.well-known/oauth-authorization-server
+note: >-
+  Scopes read from the provider's own live RFC 8414 / OIDC discovery documents.
+  There is no OpenAPI to derive from — the Investor Management API is GraphQL
+  with introspection disabled — and AngelList publishes no scopes reference page
+  outside these discovery documents. The Investor Management API itself is
+  API-key authenticated and has no scope surface; the scopes below belong to the
+  web sign-in identity provider and to the documentation MCP surface.
+schemes:
+- name: AngelListOIDC
+  issuer: https://auth.angellist.com
+  source: well-known/angellist-auth-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://auth.angellist.com/authorize
+    tokenUrl: https://auth.angellist.com/token
+- name: AngelListDocsMCPOAuth
+  issuer: https://docs.angellist.com/mcp/oauth
+  source: well-known/angellist-docs-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://docs.angellist.com/mcp/oauth/authorize
+    tokenUrl: https://docs.angellist.com/mcp/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://docs.angellist.com/mcp/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect sign-in; issue an ID token for the authenticated AngelList user.
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/angellist-auth-openid-configuration.json
+- scope: email
+  description: Release the authenticated user's email address.
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/angellist-auth-openid-configuration.json
+- scope: profile
+  description: Release the authenticated user's basic profile claims.
+  flows:
+  - authorizationCode
+  sources:
+  - well-known/angellist-auth-openid-configuration.json
+- scope: mcp:search
+  description: >-
+    Search the AngelList documentation through the documentation MCP surface
+    advertised at https://docs.angellist.com/.well-known/oauth-protected-resource.
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - well-known/angellist-docs-oauth-authorization-server.json

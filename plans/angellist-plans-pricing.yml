@@ -3,149 +3,159 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
 provider: AngelList
 providerId: angellist
+generated: '2026-09-02'
+method: searched
+source: https://www.angellist.com/pricing
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
-tags:
-  - Documents
-  - Funds
-  - Investing
-  - Jobs
-  - Startups
-  - Transactions
-  - Venture Capital
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+modified: '2026-09-02'
+supersedes:
+  method: generated
+  modified: '2026-05-04'
+  reason: >-
+    The previous file was a bulk-sweep scaffold that invented Free / Professional
+    / Enterprise API tiers with 1,000 and 100,000 request quotas and per-minute
+    rate limits. AngelList publishes none of that. Replaced 2026-09-02 with the
+    pricing AngelList actually prints on its own pricing pages.
+tags: [Funds, SPVs, Fund Administration, Investing, Venture Capital, Pricing]
+description: >-
+  AngelList's published pricing. AngelList does not sell API access as a
+  metered product — the Investor Management API is a feature of the fund
+  administration service, provisioned by request through portal@angellist.com,
+  with no per-call price, quota or public API tier anywhere on its site. What it
+  does publish, in full and without a sales gate, is the price of the underlying
+  service: two venture-fund administration plans priced as a percentage of fund
+  size plus an annual fee, and flat-fee SPV pricing with an itemized add-on
+  list.
+api_pricing:
+  metered: false
+  published_api_tiers: 0
+  note: >-
+    No API plan, quota, overage rate or price list is published. API access is
+    arranged with AngelList directly.
+plan_count: 3
 plans:
-  - id: angellist-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the AngelList API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: AngelList Investor Management API
-  - id: angellist-pro
-    name: Professional
-    type: paid
-    description: Production tier for AngelList. Provides higher quotas, priority support, and access to
-      the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: AngelList Investor Management API
-  - id: angellist-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for AngelList. Includes dedicated capacity, contractual SLAs,
-      security review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://portal-api.angellist.com/beta
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: AngelList Investor Management API
+- id: angellist-institutional
+  name: Institutional
+  type: paid
+  product: Venture Funds
+  positioning: Ideal for established firms with CFOs
+  description: >-
+    Core fund administration for firms to flexibly manage their own fund cash or
+    portfolio operations.
+  price:
+    model: percentage-of-fund-size-plus-annual-fee
+    percentage: 0.1
+    percentage_of: fund size
+    fixed: 10000
+    currency: USD
+    period: year
+    display: 0.1% of fund size + $10k / year
+  qualifiers:
+  - Subject to a minimum fund size
+  - Plus a one-time implementation fee based on fund complexity
+  cta: Talk to an expert
+  elements:
+  - Dedicated account management
+  - Investor Management software
+  - GP Portfolio & Investment Dashboard
+  - Fund filings
+  - Fund formation
+  - Fund accounting
+  - Quarterly financial statements
+  - Audit support
+  - Institutional LP support
+  - Digital subscriptions and closing
+  - LP portal and data room
+  - Investor K-1 distribution
+  - Capital calls & distributions
+  - Wire initiation for deployments
+  - Wire execution and capital tracking
+  - Asset recording
+  - Deal closing workflows
+  - Transaction review & execution
+  - Valuation support
+  add_ons:
+  - Fund taxes
+  - Investor K-1 preparation
+- id: angellist-full-service
+  name: Full Service
+  type: paid
+  product: Venture Funds
+  positioning: Ideal for most emerging managers
+  description: >-
+    All-in-one, back-office continuity from a single provider. Fund
+    administration, portfolio management tools, tax and K-1 prep, and valuation
+    support included.
+  price:
+    model: percentage-of-fund-size-plus-annual-fee
+    percentage: 0.15
+    percentage_of: fund size
+    fixed: 20000
+    currency: USD
+    period: year
+    display: 0.15% of fund size + $20k / year
+  qualifiers:
+  - Subject to a minimum fund size
+  - Plus a one-time implementation fee based on fund complexity
+  cta: Talk to an expert
+  elements:
+  - Everything in Institutional
+  - Portfolio operations
+  - Fund taxes
+  - Investor K-1 preparation
+  add_ons:
+  - Quarterly financial statements
+  - Audit support
+- id: angellist-spv
+  name: SPVs
+  type: paid
+  product: SPVs
+  positioning: Transparent flat pricing for every deal size
+  description: >-
+    One flat setup fee per SPV covering administration, investor closings,
+    distributions, and transaction review and execution.
+  source: https://www.angellist.com/pricing/spvs
+  price:
+    model: one-time-flat-fee
+    fixed: 8000
+    currency: USD
+    period: one-time
+    display: $8k one-time setup fee
+  qualifiers:
+  - Blue sky fees are a flat passthrough of $2,000 for state regulatory costs
+  - Total SPV fees are capped at 10% of the raised amount, excluding add-on services
+  elements:
+  - SPV administration
+  - Investor closings
+  - Distributions included
+  - Transaction review & execution
+  - GP Portfolio & Investment Dashboard
+  - Digital deal term review
+  - Legal SPV formation
+  - SPV filings
+  - Bank account setup & management
+  - SPV accounting
+  - SPV taxes
+  - Investor K-1 preparation
+  - Digital investor closing
+  - LP portal and data room
+  - Investor K-1 distribution
+  - Deal closing workflows
+  - Transfers & distributions
+  - Valuation support
+  add_ons:
+  - {name: International investments, price: 1000, currency: USD}
+  - {name: Self-advised SPV, price: 1000, currency: USD}
+  - {name: Non-standard investments, price: 2000, currency: USD}
+  - {name: Crypto investments, price: 2000, currency: USD}
+  - {name: Blocker setup, price: 6000, currency: USD}
+  - {name: Financial statements, price: 10000, currency: USD}
+  - {name: 3(c)(7) Parallel fund, price: 12000, currency: USD}
+  - {name: Master LP formation, price: 4000, currency: USD}
+evidence:
+- url: https://www.angellist.com/pricing
+  http_status: 200
+  final_url: https://www.angellist.com/pricing/venture-funds
+- url: https://www.angellist.com/pricing/spvs
+  http_status: 200
 maintainers: []

@@ -1,0 +1,104 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  live discovery documents on auth.angellist.com, docs.angellist.com and
+  support.angellist.com, plus https://trust-portal.angellist.com/
+standards:
+- id: graphql
+  conforms: true
+  evidence: >-
+    The Investor Management API is a GraphQL service at
+    https://portal-api.angellist.com/beta; it returns spec-shaped GraphQL error
+    envelopes and enforces named operations. Probed 2026-09-02.
+- id: oidc-discovery
+  conforms: true
+  evidence: >-
+    https://auth.angellist.com/.well-known/openid-configuration returns a
+    complete OpenID Connect Discovery 1.0 document (issuer, authorization,
+    token, revocation, end_session, jwks_uri, EdDSA id_token signing).
+- id: rfc8414-oauth-authorization-server-metadata
+  conforms: true
+  evidence: >-
+    Served on two hosts — https://auth.angellist.com/.well-known/oauth-authorization-server
+    and https://docs.angellist.com/.well-known/oauth-authorization-server.
+- id: rfc9728-oauth-protected-resource-metadata
+  conforms: true
+  evidence: >-
+    https://docs.angellist.com/.well-known/oauth-protected-resource declares
+    resource https://docs.angellist.com with authorization server
+    https://docs.angellist.com/mcp/oauth.
+- id: rfc7591-dynamic-client-registration
+  conforms: true
+  evidence: >-
+    registration_endpoint https://auth.angellist.com/oauth/register is advertised
+    in the OAuth AS metadata; the docs MCP AS advertises
+    https://docs.angellist.com/mcp/oauth/register.
+- id: rfc7636-pkce
+  conforms: true
+  evidence: >-
+    code_challenge_methods_supported ["S256"] on both authorization servers, and
+    live sign-in redirects carry code_challenge_method=S256.
+- id: oauth2-authorization-code
+  conforms: true
+  evidence: grant_types_supported includes authorization_code and refresh_token.
+- id: a2a-1.0.0
+  conforms: true
+  grade: conformant
+  evidence: >-
+    https://support.angellist.com/.well-known/agent-card.json is a conformant A2A
+    1.0.0 agent card (capabilities object, protocolVersion 0.3, skills array).
+    See a2a/angellist-a2a.yml.
+- id: agent-skills
+  conforms: true
+  evidence: >-
+    A provider-authored Agent Skill with standard frontmatter is served at
+    https://support.angellist.com/.well-known/agent-skills/angellist/skill.md.
+- id: llmstxt
+  conforms: true
+  evidence: >-
+    https://support.angellist.com/llms.txt returns a valid llms.txt (H1,
+    blockquote-style descriptions, "## Docs" link list, 11,847 bytes,
+    text/plain), and a companion llms-full.txt is served alongside it.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: >-
+    No security.txt on any AngelList-controlled host. www.angellist.com answers
+    200 with its catch-all SPA shell; the rest return 404. See
+    security/angellist-vulnerability-disclosure.yml.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: GraphQL errors[] envelope; no application/problem+json surface.
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI is published. /openapi.json, /swagger.json, /api-docs and
+    /openapi.yaml all miss on the API host and the docs host.
+- id: asyncapi
+  conforms: false
+  evidence: No event or streaming contract is published.
+- id: mcp
+  conforms: partial
+  evidence: >-
+    OAuth metadata for an MCP surface is published, but
+    https://docs.angellist.com/mcp answers 403 "MCP auth is not enabled for this
+    deployment" to every request. Advertised, not reachable.
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    https://trust-portal.angellist.com/ publishes a SOC 2 Type II attestation
+    (Trust Services Principles), available on request, with Secureframe
+    continuous monitoring.
+- id: gdpr
+  conforms: true
+  evidence: GDPR program listed on the AngelList trust portal.
+domain_standard:
+  market: venture fund administration / private markets investor management
+  standard_declared: null
+  note: >-
+    Reward-only and correctly empty. AngelList's market has no widely adopted
+    machine-readable interchange standard that a contract could declare — there
+    is no fund-administration equivalent of FHIR, SCIM or ISO 20022 in use here,
+    and AngelList declares none. Recorded as absent rather than invented. The
+    regulated-entity signal that does exist is the SOC 2 Type II attestation and
+    the KYC/AML subprocessor chain (Persona, Alloy, Plaid) named on the trust
+    portal, both captured in security/angellist-trust-center.yml.

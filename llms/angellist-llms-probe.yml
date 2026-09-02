@@ -18,3 +18,13 @@ llms:
   bytes: 29770
   note: >-
     HTTP 200 serving HTML, not a text llms.txt. A 200 is not evidence.
+  superseded_by: llms/angellist-llms.txt
+  superseded_note: >-
+    Re-probed 2026-09-02. The docs.angellist.com verdict still stands and is now
+    explained: every path on that host 302s to
+    /login?redirect=... , so the 200/HTML this file recorded is the Mintlify
+    login shell, not an llms.txt. A REAL llms.txt was found on a different
+    AngelList host — https://support.angellist.com/llms.txt (200, text/plain,
+    11,847 bytes, 71 documented pages) — and saved verbatim to
+    llms/angellist-llms.txt. This negative record is kept because the pointer it
+    corrects (docs.angellist.com/llms.txt) was a false credit.

@@ -44,10 +44,15 @@ apis:
     pendingSubmission, submitted, pendingReview, pendingRevision, igo,
     confirmed, and rejected states.
   contact:
-  - FN: AngelList Support
-    url: https://help.angel.co/
-    email: ''
+  - FN: AngelList API Support
+    url: https://support.angellist.com/
+    email: portal@angellist.com
 name: AngelList
+maintainers:
+- FN: AngelList API Support
+  email: portal@angellist.com
+  url: https://support.angellist.com/
+  X: https://x.com/angellistapi
 tags:
 - Documents
 - Funds
@@ -91,8 +96,6 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/angellist.png
 access: 3rd-Party
 common:
-- type: VulnerabilityDisclosure
-  url: security/angellist-vulnerability-disclosure.yml
 - type: DomainSecurity
   url: security/angellist-domain-security.yml
 - type: LinkedIn
@@ -126,12 +129,18 @@ common:
   type: PrivacyPolicy
 - url: https://trust-portal.angellist.com/
   name: Trust Center
-  type: Security
+  type: TrustCenter
+- url: security/angellist-trust-center.yml
+  name: Trust Center Profile
+  type: TrustCenter
+- url: https://trust-portal.angellist.com/
+  name: SOC 2 Type II and GDPR compliance
+  type: Compliance
 - url: https://www.angellist.com/blog
   name: Blog
   type: Blog
-- url: https://help.angel.co/
-  name: Help Center
+- url: https://support.angellist.com/
+  name: AngelList Investor Management Help Center
   type: Support
 - url: https://x.com/angellistapi
   name: AngelList API on X
@@ -142,10 +151,77 @@ common:
 - url: https://wellfound.com/blog/angellist-talent-is-now-wellfound
   name: AngelList Talent is now Wellfound
   type: Announcement
-- type: LlmsText
-  url: https://docs.angellist.com/llms.txt
+- url: llms/angellist-llms.txt
+  name: AngelList llms.txt
+  type: LLMsTxt
+- url: https://support.angellist.com/llms.txt
+  name: AngelList Help Center llms.txt
+  type: LLMsTxt
+- url: a2a/angellist-a2a.yml
+  name: AngelList A2A Agent Card
+  type: AgentCard
+- url: skills/_index.yml
+  name: AngelList Agent Skills
+  type: AgentSkill
+- url: skills/angellist-investor-management-platform.md
+  name: AngelList Investor Management Platform Agent Skill
+  type: AgentSkill
+- url: well-known/angellist-well-known.yml
+  name: AngelList Well-Known Discovery Probe
+  type: WellKnown
+- url: authentication/angellist-authentication.yml
+  name: AngelList Authentication Profile
+  type: Authentication
+- url: scopes/angellist-scopes.yml
+  name: AngelList OAuth Scopes
+  type: OAuthScopes
+- url: conventions/angellist-conventions.yml
+  name: AngelList API Conventions
+  type: Conventions
+- url: errors/angellist-error-codes.yml
+  name: AngelList Error Catalog
+  type: ErrorCatalog
+- url: lifecycle/angellist-lifecycle.yml
+  name: AngelList API Lifecycle
+  type: Lifecycle
+- url: conformance/angellist-conformance.yml
+  name: AngelList Standards Conformance
+  type: Conformance
+- url: sandbox/angellist-sandbox.yml
+  name: AngelList Staging Environment
+  type: Sandbox
+- url: packages/angellist-packages.yml
+  name: AngelList Client Libraries
+  type: Packages
+- url: plans/angellist-plans-pricing.yml
+  name: AngelList Plans and Pricing
+  type: Plans
+- url: rate-limits/angellist-rate-limits.yml
+  name: AngelList Rate Limits
+  type: RateLimits
+- url: graphql/angellist-graphql-probe.yml
+  name: AngelList GraphQL Endpoint Probe
+  type: GraphQL
+- url: https://www.angellist.com/pricing
+  name: Pricing
+  type: Pricing
+- url: https://venture.angellist.com/v/login
+  name: Sign In
+  type: Login
+- url: https://docs.angellist.com/
+  name: AngelList Developer Documentation
+  type: DeveloperPortal
+- url: https://docs.angellist.com/graphql
+  name: GraphQL API Reference
+  type: APIReference
+- url: https://support.angellist.com/investor-help/new/new-investor
+  name: Welcome to AngelList Digital Subscriptions
+  type: GettingStarted
+- url: https://www.angellist.com/careers
+  name: Careers
+  type: Careers
 created: '2026-03-24'
-modified: '2026-04-19'
+modified: '2026-09-02'
 specificationVersion: '0.23'
 description: >-
   AngelList provides an investor management GraphQL API that enables fund
@@ -153,3 +229,9 @@ description: >-
   organizations, documents, and capital flows via the AngelList investor portal.
   The platform supports venture capital workflows including transaction lifecycle
   management, document signing, data rooms, and investor onboarding.
+
+x-enrichment:
+  date: '2026-09-02'
+  status: enriched
+  artifacts_added: 26
+  pass: local-v1

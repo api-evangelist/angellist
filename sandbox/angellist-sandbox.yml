@@ -1,0 +1,49 @@
+generated: '2026-09-02'
+method: searched
+source: https://docs.angellist.com/docs/overview
+docs_access_note: >-
+  As of 2026-09-02 docs.angellist.com 302s every path to
+  /login?redirect=... , so the overview page could not be re-read directly. The
+  values below are what that page publishes and were confirmed against its
+  publicly indexed copy. No test value has been invented; only the environment
+  separation AngelList states is recorded, and no magic test identifiers,
+  test cards or fixture values are claimed because AngelList publishes none.
+test_live_separation:
+  supported: true
+  mechanism: environment-scoped API key prefixes and a separate staging host
+  environments:
+  - name: staging
+    endpoint: https://portal-api-staging.angellist.com/beta
+    key_prefix: sk_test
+  - name: production
+    endpoint: https://portal-api.angellist.com/beta
+    key_prefix: sk_live
+provisioning:
+  self_service: false
+  detail: >-
+    Keys are not self-serve. AngelList issues API credentials on request —
+    "Please reach out to us at portal@angellist.com so we can talk you through
+    setting up an API connection" (Data Room API page). The same address is
+    given for API setup in the provider's published Agent Skill.
+  contact: portal@angellist.com
+  evidence:
+  - url: https://support.angellist.com/data-room/integrations/API.md
+    http_status: 200
+test_values:
+  cards: []
+  bank_accounts: []
+  identifiers: []
+  note: >-
+    None published. AngelList documents no magic test values, test clocks, time
+    simulation, fixture generators or trigger tooling on any reachable page.
+    Recorded as absent rather than omitted.
+test_clocks:
+  supported: false
+console:
+  url: https://docs.angellist.com/graphql
+  name: GraphQL Explorer
+  reachable: false
+  http_status: 200
+  note: >-
+    Redirects to the docs login. The explorer exists but cannot be opened
+    anonymously, so it is not a public console.

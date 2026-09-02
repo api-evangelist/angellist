@@ -1,0 +1,71 @@
+# AngelList Investor Management Help Center
+
+## Docs
+
+- [AngelList Investor Management Help Center](https://support.angellist.com/index.md): The Investor Management Platform centralizes your prospecting, closing, and communication workflows within a single system.
+- [Overview](https://support.angellist.com/investor-help/overview.md)
+- [Welcome to AngelList Digital Subscriptions!](https://support.angellist.com/investor-help/new/new-investor.md): This short guide will walk you through your first transaction—filling out your subscription documents quickly, securely, and easily.
+- [Common Errors](https://support.angellist.com/investor-help/account/common-errors.md): Server Error or "You are not a part of an organization"
+- [How to reset your password](https://support.angellist.com/investor-help/account/reset-password.md)
+- [Settings](https://support.angellist.com/investor-help/account/settings.md): Breaking down your settings page
+- [Transaction Dashboard](https://support.angellist.com/investor-help/subscription-documents/transaction-dashboard.md): This guide explains what you will find after opening up a Transaction. Here you'll see everything from reference documents (e.g. LPAs, PPMs, etc), action buttons to start filling out your documents, fund manager contact information, your own entity information, and more!
+- [Can I change my investing entity name and type?](https://support.angellist.com/investor-help/subscription-documents/change-investing-entity.md): Changing your entity info before submitting your transaction
+- [How do I copy my saved information into a new Transaction?](https://support.angellist.com/investor-help/subscription-documents/copy-saved-info.md)
+- [Where do I find the fund managers contact information?](https://support.angellist.com/investor-help/subscription-documents/contact-information.md): A firms information can be found within the associated Transaction
+- [Where to find your signed documents](https://support.angellist.com/investor-help/subscription-documents/signed-documents.md): Your signed documents will live on the Files tab within a Transaction
+- [Start a Transaction for Someone Else](https://support.angellist.com/investor-help/subscription-documents/start-transaction-for-someone-else.md)
+- [How do I invite a team member or 3rd party into the Transaction?](https://support.angellist.com/investor-help/subscription-documents/invite-team-member.md): Inviting other members into your Transaction to help complete it
+- [Transaction Statuses](https://support.angellist.com/investor-help/subscription-documents/statuses.md): What do the different transaction statuses mean?
+- [How do I invite a Team Member to my Investor Portal?](https://support.angellist.com/invite-team-member.md)
+- [Access Transaction Documents from the Portal](https://support.angellist.com/access-transaction-documents.md)
+- [How to reset your password](https://support.angellist.com/platform/reset-password.md)
+- [Universal Directory Definitions](https://support.angellist.com/platform/universal-directory.md): Understanding the difference between your Directory Entities & Directory People
+- [Settings](https://support.angellist.com/platform/settings.md): Explaining your settings under the "Organization" left sidebar tab
+- [Overview](https://support.angellist.com/digitalsubs/overview.md): Select from the two options below for help with Transactions & Templates within Digital Subscription or details on onboarding into the product.
+- [Templates Overview](https://support.angellist.com/digitalsubs/templates/templates-overview.md): Explaining what Templates are and how to edit them
+- [Template Previews](https://support.angellist.com/digitalsubs/templates/template-previewing.md): How to preview your Template as a specific investor type
+- [Updating Reference Documents](https://support.angellist.com/digitalsubs/templates/reference-documents.md): How to upload, edit, and remove reference documents like PPMs, LPAs, etc
+- [Transactions Overview](https://support.angellist.com/digitalsubs/transactions/transactions-overview.md): An overview on what you can do with Transactions
+- [Transaction Statuses](https://support.angellist.com/digitalsubs/transactions/statuses.md): What do the different transaction statuses mean?
+- [Requesting Edits/Revisions](https://support.angellist.com/digitalsubs/transactions/revisions.md): How to request a revision from a submitted transaction and how to finalize it internally
+- [How to counter-sign your documents](https://support.angellist.com/digitalsubs/transactions/counter-signatures.md): Optional feature to counter-sign after you mark In Good Order
+- [Uploading documents into a Transaction](https://support.angellist.com/digitalsubs/transactions/uploading-documents.md): How to upload investor documents into a Transaction as an admin
+- [How to export your transactions and investors information](https://support.angellist.com/digitalsubs/transactions/export-information.md): CSV export feature
+- [What if I change my fund admin?](https://support.angellist.com/digitalsubs/transactions/fund-admin-change.md)
+- [Introduction](https://support.angellist.com/digitalsubs/onboarding/introduction.md): Welcome to the AngelList Digital Subscriptions onboarding guide!
+- [Webform Creation](https://support.angellist.com/digitalsubs/onboarding/webform-creation.md): This article outlines the process for reviewing and customizing your first webform draft in AngelList Digital Subscriptions following your kick-off call.
+- [Document and Signature Testing](https://support.angellist.com/digitalsubs/onboarding/document-and-signature-testing.md): This article explains how to test your document mapping and investor signing flow after approving the Template layout.
+- [Final Launch](https://support.angellist.com/digitalsubs/onboarding/final-launch.md): This article covers the final steps before launch, including Template finalization, email setup, and receiving your public Template links.
+- [What is the AngelList Data Room?](https://support.angellist.com/data-room/overview/what-is-data-room.md): A high-level explanation of what the Data Room is, who it’s for, and how it helps fund managers share fundraising materials with investors securely.
+- [Getting Started Demo](https://support.angellist.com/data-room/overview/getting-started.md): A step-by-step, interactive guide for setting up your first Data Room, including layout customization and content uploading.
+- [Top FAQs](https://support.angellist.com/data-room/overview/top-faqs.md): Quick answers to the most common questions users have about setting up, editing, and sharing their Data Room.
+- [Create Your First Data Room](https://support.angellist.com/data-room/getting-started/create.md): Learn how to start a new Data Room, configure your page, and publish for investor access.
+- [Customize Logo, Banner, and Name](https://support.angellist.com/data-room/getting-started/branding.md): Instructions on how to personalize your Data Room with your fund name, header image, and logo to match your brand.
+- [Understanding Page Sections](https://support.angellist.com/data-room/getting-started/page-sections.md): An overview of the types of content sections you can add—like videos, featured docs, FAQs, team bios, and co-investors.
+- [Upload & Organize Documents](https://support.angellist.com/data-room/managing-content/documents.md): How to upload files to your document library, create folders, and manage your materials efficiently.
+- [Configuring Your Data Room Page](https://support.angellist.com/data-room/managing-content/configuring.md): Reorder, remove, or add new sections to customize the viewer experience and tell your fund’s story.
+- [Set Up Custom CTAs](https://support.angellist.com/data-room/managing-content/buttons.md): Guide for adding call-to-action buttons that link to subscription flows or your website.
+- [Invite Visitors (Email vs Public Links)](https://support.angellist.com/data-room/access/inviting-investors.md): Compare private invites vs public access links and learn when and how to use each to control who can enter your Data Room.
+- [Set Up Permission Groups](https://support.angellist.com/data-room/access/permission-groups.md): Create groups with customized permissions (e.g. view-only or download access) for different types of investors or stakeholders.
+- [Set Viewer Permissions](https://support.angellist.com/data-room/security/viewer-permissions.md): Control who can view or download documents.
+- [Configure NDA Disclaimer Popup](https://support.angellist.com/data-room/security/NDA.md): Set up a mandatory disclaimer popup that visitors must accept before entering your Data Room.
+- [Watermarks & Screenshot Policy](https://support.angellist.com/data-room/security/watermarks.md): Overview of how watermarks are applied and why screenshotting is discouraged for confidential material.
+- [Analytics Table](https://support.angellist.com/data-room/analytics/analytics-table.md): Access key stats like number of views, popular files, and recent visitor activity at a glance.
+- [Track File & Viewer Activity](https://support.angellist.com/data-room/analytics/file-tracking.md): Drill into who viewed what, when, and how often—so you can follow up with high-intent investors.
+- [Data Room API](https://support.angellist.com/data-room/integrations/API.md): How to access our API to push activity from the Data Room to wherever you need it.
+- [Connecting Digital Subscription Templates to Your Data Room](https://support.angellist.com/data-room/integrations/digitalsubs.md): Learn how to integrate Digital Subscriptions and customizable CTAs (Call to Action buttons) into your Data Room, giving investors seamless access to subscription templates, external sites, or email outreach.
+- [Supported File Types](https://support.angellist.com/data-room/faqs/file-types.md): List of supported document types (PDF, DOCX, Excel, etc.) and file size limits.
+- [Cloning a Data Room](https://support.angellist.com/data-room/faqs/cloning.md): The current process on how to have your Data Rooms cloned.
+- [Mobile Compatibility](https://support.angellist.com/data-room/faqs/mobile.md): What users can expect when viewing or accessing the Data Room from a phone or tablet.
+- [AngelList Investor Portal](https://support.angellist.com/portal/general/portal-general.md): Welcome to the Investor Portal help center!
+- [Frequently Asked Questions](https://support.angellist.com/portal/general/faqs.md): Investor Portal FAQs
+- [Universal Directory](https://support.angellist.com/portal/general/universal-directory.md): Breaking down the Directory drop down and how you manage your investors
+- [Understanding Vehicles in the Investor Portal](https://support.angellist.com/portal/general/vehicles.md): A Vehicle represents a fund or SPV entity within your Investor Portal. It serves as the central hub for connecting relevant entities, documents, and key stakeholders in one place.
+- [Bulk Uploading Directory Entities & People in the Investor Portal](https://support.angellist.com/portal/bulk-jobs/bulk-create-investors.md): Learn how to initiate a bulk upload of Directory Entities (investor profiles) and Directory People (associated contacts) in the Investor Portal. This guide gives you a high-level overview of the process and directs you to the in-app guide for detailed instructions.
+- [Bulk Uploading Documents to Directory Entities in the Investor Portal](https://support.angellist.com/portal/bulk-jobs/bulk-upload-tool.md): Efficiently distribute documents to multiple investor profiles using the Bulk Upload feature. This guide provides an overview of the process and directs you to the in-app guide for detailed instructions.
+
+## Optional
+
+- [Login](https://portal.angellist.com)
+- [Education Center](https://www.angellist.com/learn)
+- [Blog](https://www.angellist.com/blog)

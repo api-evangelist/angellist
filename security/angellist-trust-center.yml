@@ -1,0 +1,68 @@
+generated: '2026-09-02'
+method: searched
+probe: true
+url: https://trust-portal.angellist.com/
+legal_entity: AL Advisors Management Inc.
+title: AL Advisors Management Inc. | Trust Center
+platform: Secureframe
+certifications:
+- SOC 2 Type II
+compliance_programs:
+- id: soc2-type2
+  name: SOC 2 Type 2
+  detail: Service Organization Controls (SOC 2) Type II, Trust Services Principles
+  availability: available on request through the trust portal
+- id: gdpr
+  name: GDPR
+  detail: >-
+    Protects the personal data and privacy of EU citizens for transactions
+    occurring within EU member states.
+  availability: linked from the trust portal
+resources:
+- name: SOC 2 Type II report
+  access: request
+- name: Penetration tests
+  access: request
+- name: Privacy Policy
+  access: public
+  url: https://venture.angellist.com/privacy
+monitored_control_families:
+- Change Management
+- Availability
+- Organizational Management
+- Confidentiality
+- Vulnerability Management
+- Incident Response
+- Risk Assessment
+- Network Security
+- Access Security
+- Physical Security
+named_policies:
+- Secure Development Policy
+- Change Management Policy
+- Configuration and Asset Management Policy
+- Business Continuity and Disaster Recovery Policy
+- Acceptable Use Policy
+- Data Classification Policy
+- Data Retention and Disposal Policy
+- Vulnerability and Patch Management Policy
+- Incident Response Plan
+- Vendor Risk Management Policy
+- Risk Assessment and Treatment Policy
+- Network Security Policy
+- Access Control and Termination Policy
+subprocessors:
+- {name: AWS, purpose: Application hosting and data storage}
+- {name: Cloudflare, purpose: Content Delivery Network}
+- {name: Google Cloud, purpose: Application hosting and data storage}
+- {name: Front, purpose: Customer Management System}
+- {name: Persona, purpose: Identity verification platform for KYC/AML compliance}
+- {name: Alloy, purpose: Identity data orchestration platform and fraud prevention}
+- {name: Plaid, purpose: Digital finance platform used for bank verification}
+- {name: Coinbase, purpose: Cryptocurrency services}
+- {name: Treasury Prime, purpose: Banking-as-a-service platform}
+evidence:
+- source: https://trust-portal.angellist.com/
+  http_status: 200
+  bytes: 230950
+  keywords: [SOC 2, GDPR, trust center, penetration tests, subprocessors, Secureframe]

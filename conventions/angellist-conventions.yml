@@ -1,0 +1,158 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Live probes of https://portal-api.angellist.com/beta plus the provider's own
+  published Agent Skill
+  (https://support.angellist.com/.well-known/agent-skills/angellist/skill.md)
+  and help center (https://support.angellist.com/llms.txt)
+note: >-
+  AngelList's Investor Management API is GraphQL, not REST, and its developer
+  reference at docs.angellist.com now sits behind a login. Everything recorded
+  here was either observed directly against the live endpoint or read from a
+  document AngelList publishes without authentication. Nothing is inferred from
+  a REST convention the provider does not have.
+api_style: graphql
+endpoints:
+  production: https://portal-api.angellist.com/beta
+  staging: https://portal-api-staging.angellist.com/beta
+authentication:
+  style: api-key
+  transport: header
+  key_prefixes:
+    production: sk_live
+    staging: sk_test
+  detail: authentication/angellist-authentication.yml
+request_semantics:
+  transport: HTTP POST with a JSON body carrying query/variables/operationName
+  named_operations_required: true
+  named_operations_evidence: >-
+    An anonymous query returns HTTP 400 with
+    {"errors":[{"message":"Anonymous operations are not allowed in production.
+    Please provide an operation name, e.g. `query MyQueryName { ... }` or
+    `mutation MyMutationName { ... }`.","extensions":{"code":"ANONYMOUS_OPERATION"}}]}
+    — observed 2026-09-02. Every operation an agent sends must be named.
+  missing_query_response: '{"errors":[{"message":"Must provide query string."}]}  (HTTP 200)'
+introspection:
+  enabled: false
+  evidence: >-
+    A named IntrospectionQuery returns HTTP 200 with per-field errors:
+    "GraphQL introspection has been disabled, but the requested query contained
+    the field \"__schema\"." Observed 2026-09-02. No SDL can be harvested; the
+    schema is documented only behind the docs login.
+error_envelope:
+  style: graphql-errors
+  shape: 'top-level errors[] with message, locations[], and extensions.code'
+  observed_codes:
+  - code: ANONYMOUS_OPERATION
+    meaning: the request did not name its operation
+  http_status_on_error: 200 or 400 depending on whether the request parsed
+  rfc9457: false
+  detail: errors/angellist-error-codes.yml
+pagination:
+  documented: false
+  note: >-
+    Not stated in any publicly reachable AngelList document. The GraphQL
+    reference that would define connection/cursor shapes is behind the
+    docs.angellist.com login. Not guessed.
+idempotency:
+  supported: unknown
+  header: null
+  note: >-
+    AngelList publishes no idempotency contract on any public surface, and there
+    is no OpenAPI or readable GraphQL schema in which an idempotency key
+    parameter could be observed. No Idempotency pointer is emitted — asserting
+    one here would be inventing a guarantee that protects real money movement.
+rate_limit_signaling:
+  documented: false
+  detail: rate-limits/angellist-rate-limits.yml
+versioning:
+  scheme: uri-path
+  current: beta
+  evidence: the production base URL is https://portal-api.angellist.com/beta
+  policy_url: null
+  detail: lifecycle/angellist-lifecycle.yml
+request_tracing:
+  documented: false
+metadata_fields:
+  documented: false
+reversibility:
+  applicable: true
+  grade: documented
+  api_level_confirmed: false
+  note: >-
+    The AngelList write surface is real — transactions move money and bind
+    signatures — and the provider documents how each write is taken back at the
+    product level in its own published Agent Skill and help center. It does NOT
+    publish the GraphQL mutations or the time windows behind those reversals,
+    because the API reference is login-gated, so this grades `documented` rather
+    than `verified`. No window below is asserted unless AngelList states it in
+    words.
+  surfaces:
+  - surface: Digital Subscriptions transaction
+    write: >-
+      Create a transaction and invite an investor to complete and sign
+      subscription documents.
+    reversal: Request revision
+    reversal_detail: >-
+      A fund manager reviewing a Submitted / Pending Review transaction can click
+      a specific field and request a revision; the transaction returns to Pending
+      Revision and the investor edits without restarting. Repeatable until
+      finalized.
+    window_stated: false
+    operation_id: null
+    docs: https://support.angellist.com/digitalsubs/transactions/transactions-overview
+  - surface: Digital Subscriptions transaction
+    write: Finalize a transaction
+    reversal: Finalize as Rejected
+    reversal_detail: >-
+      Finalize offers "In Good Order" or "Rejected". Rejected is the terminal
+      negative outcome; AngelList states the status cannot then be changed
+      manually.
+    window_stated: false
+    docs: https://support.angellist.com/digitalsubs/transactions/transactions-overview
+  - surface: Digital Subscriptions transaction
+    write: Delete a transaction
+    reversal: none-available
+    reversal_detail: >-
+      AngelList states plainly that users cannot delete transactions — only the
+      AngelList team can, and guardrails exist to prevent accidental deletion.
+      An agent must treat transaction creation as non-deletable.
+    window_stated: false
+    docs: https://support.angellist.com/investor-help/account/common-errors
+  - surface: Digital Subscriptions private email invite
+    write: Send a one-click private email invite
+    reversal: none-available
+    reversal_detail: >-
+      A private email invite is one-click only; once the investor clicks it the
+      link becomes null and cannot be resent. A new transaction must be created.
+      Public links, by contrast, stay active and are re-shareable.
+    window_stated: true
+    window: >-
+      Email invitations expire after 75 days and cannot be refreshed; the
+      recipient must request a new invite from the sender.
+    docs: https://support.angellist.com/investor-help/account/common-errors
+  - surface: Data Room access
+    write: Grant an investor or group access to a data room
+    reversal: Revoke via permission groups
+    reversal_detail: >-
+      Access is administered through permission groups (View Only, View &
+      Download, Custom Access) on the data room Access tab, so a grant is
+      revocable by changing or removing the group. Public access links are
+      anonymous and cannot be revoked per-viewer.
+    window_stated: false
+    docs: https://support.angellist.com/data-room/overview/what-is-data-room
+dry_run_mode:
+  supported: true
+  mechanism: separate staging environment
+  detail: >-
+    AngelList separates test from live at the credential level — sk_test keys
+    against https://portal-api-staging.angellist.com/beta, sk_live keys against
+    production. There is no in-request dry-run/simulate flag documented.
+  see: sandbox/angellist-sandbox.yml
+cross_links:
+  authentication: authentication/angellist-authentication.yml
+  scopes: scopes/angellist-scopes.yml
+  errors: errors/angellist-error-codes.yml
+  lifecycle: lifecycle/angellist-lifecycle.yml
+  rate_limits: rate-limits/angellist-rate-limits.yml
+  sandbox: sandbox/angellist-sandbox.yml

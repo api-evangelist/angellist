@@ -1,0 +1,67 @@
+generated: '2026-09-02'
+method: probed
+source: https://support.angellist.com/.well-known/agent-card.json
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: support.angellist.com
+  note: >-
+    Found on the AngelList Investor Management Help Center host. The canonical
+    A2A 1.0.0 path returned the card directly; the legacy
+    /.well-known/agent.json returned 404 on the same host, and a
+    negative-control path (/.well-known/angellist-negative-control-7f3ab91c.json)
+    also returned 404, so this host is not an SPA catch-all and the 200 is a
+    real document.
+ownership:
+  verified: true
+  evidence: >-
+    Card self-identifies as "AngelList Investor Management Help Center", its
+    url, provider.url and documentationUrl all point at
+    https://support.angellist.com/, and the single skill describes AngelList
+    data rooms, digital subscriptions and the investor portal. Served from
+    angellist.com.
+conformance:
+  spec: A2A 1.0.0
+  grade: conformant
+  protocol_version: '0.3'
+  preferred_transport: HTTP+JSON
+  hard_checks:
+    capabilities_is_object: true
+    protocol_version_present: true
+    skills_is_array: true
+  optional_fields:
+    preferred_transport: true
+    default_input_modes: true
+    default_output_modes: true
+  deviations:
+  - id: supportedInterfaces-instead-of-additionalInterfaces
+    note: >-
+      The card declares transports under `supportedInterfaces`; A2A 1.0.0 names
+      this field `additionalInterfaces`. Does not fail any hard check.
+card:
+  name: AngelList Investor Management Help Center
+  url: https://support.angellist.com/
+  version: 1.0.0
+  provider: AngelList Investor Management Help Center
+  documentation_url: https://support.angellist.com/
+  capabilities:
+    streaming: false
+    push_notifications: false
+  skills: 1
+  skill_ids:
+  - angellist
+  file: angellist-agent-card.json
+linked_artifacts:
+  agent_skill: skills/angellist-investor-management-platform.md
+  agent_skill_source: https://support.angellist.com/.well-known/agent-skills/angellist/skill.md
+  llms_txt: llms/angellist-llms.txt
+x-evidence:
+  fetched: '2026-09-02'
+  url: https://support.angellist.com/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  bytes: 994
+  negative_control:
+    url: https://support.angellist.com/.well-known/angellist-negative-control-7f3ab91c.json
+    http_status: 404
+    result: passed
