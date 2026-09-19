@@ -6,7 +6,7 @@ apis:
   tags:
   - Documents
   - Entities
-  - Funds
+  - Fund
   - Investing
   - Signatures
   - Startups
@@ -55,7 +55,7 @@ maintainers:
   X: https://x.com/angellistapi
 tags:
 - Documents
-- Funds
+- Fund
 - Investing
 - Job
 - Startups
