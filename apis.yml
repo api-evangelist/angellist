@@ -1,5 +1,8 @@
 aid: angellist
 url: https://raw.githubusercontent.com/api-evangelist/angellist/refs/heads/main/apis.yml
+x-docs-platform: mintlify
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-09-18
 apis:
 - aid: angellist:investor-management-api
   name: AngelList Investor Management API
