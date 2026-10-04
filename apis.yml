@@ -64,6 +64,7 @@ tags:
 - Startups
 - Transaction
 - Venture Capital
+- A2A
 tags_raw:
 - Documents
 - Funds
@@ -72,6 +73,7 @@ tags_raw:
 - Startups
 - Transactions
 - Venture Capital
+- A2A
 type: Index
 deliveryModel:
   model: saas
@@ -238,3 +240,10 @@ x-enrichment:
   status: enriched
   artifacts_added: 26
   pass: local-v1
+x-a2a:
+  verified: true
+  probed: '2026-09-26'
+  url: "https://support.angellist.com/.well-known/agent-card.json"
+  grade: "conformant"
+  protocol_version: "0.3"
+  control: 404
