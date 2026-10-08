@@ -101,6 +101,8 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/angellist.png
 access: 3rd-Party
 common:
+- type: FinOps
+  url: finops/angellist-finops.yml
 - type: DomainSecurity
   url: security/angellist-domain-security.yml
 - type: LinkedIn
