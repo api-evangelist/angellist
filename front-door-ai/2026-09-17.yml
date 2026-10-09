@@ -1,0 +1,27 @@
+# Front Door AI Index — angellist — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: angellist
+  lexicon_version: '1.0'
+  probed_at: '2026-09-25'
+  host: www.angellist.com
+  final_host: www.angellist.com
+  ownership: own
+  owner: angellist
+  shares_host_with: null
+  inherited_from: null
+  alias_of: null
+  verdict: silent
+  score: 0
+  band: 1
+  band_label: silent
+  host_score: 0
+  density: 0.0
+  words: 555
+  tiers:
+    agentic: 0
+    core: 0
+    model: 0
+  ambiguous: 0
+  top_terms: null
