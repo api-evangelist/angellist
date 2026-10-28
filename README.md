@@ -1,4 +1,4 @@
-# AngelList (angellist)
+# AngelList
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,62 +64,129 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AngelList (https://angel.co/) is a platform for startups, angel investors, and job seekers in the tech industry. Founded in 2010 by Naval Ravikant and Babak Nivi, AngelList has evolved into a comprehensive ecosystem connecting startups with capital and talent. Its talent-focused arm was spun out in 2022 and rebranded as Wellfound (https://wellfound.com/), which focuses on startup job discovery and hiring. AngelList itself continues to operate as a venture and private markets platform, offering fund administration, investor portals, data rooms, and digital subscriptions for fund managers and investors.
+AngelList provides an investor management GraphQL API that enables fund managers and investors to programmatically manage transactions, entities, organizations, documents, and capital flows via the AngelList investor portal. The platform supports venture capital workflows including transaction lifecycle management, document signing, data rooms, and investor onboarding.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/angellist/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/angellist/refs/heads/main/apis.yml)
+**Areas:** Documents · Fund · Investing · Job · Startups · Transaction · Venture Capital · A2A
 
-## Scope
+## AngelList on APIs.io
 
-- **Type:** Index
-- **Access:** 3rd-Party
+Everything profiled for AngelList is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/angellist/](https://apis.io/providers/angellist/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (1)
 
- - Documents, Funds, Investing, Jobs, Startups, Transactions, Venture Capital
+- [AngelList Investor Management API](https://apis.io/apis/angellist/investor-management-api/) — The AngelList Investor Management API is a GraphQL API that enables programmatic access to the AngelList investor portal, supporting fund managers and…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-24
-- **Modified:** 2026-04-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### AngelList Investor Management API
+GraphQL schemas.
 
-The AngelList Investor Management API is a GraphQL API that enables programmatic access to the AngelList investor portal, supporting fund managers and investors in managing transactions, documents, and capital flows. With this API, developers can inspect existing transactions for status and metadata, manage entities and organizations, access data rooms and signature files, and receive callbacks when transactions are complete. The API supports a full transaction lifecycle including created, pendingSubmission, submitted, pendingReview, pendingRevision, igo, confirmed, and rejected states. Authentication is performed via bearer token, and the API is self-documenting through GraphQL introspection. Separate staging and production environments are available for development and testing.
+- [AngelList GraphQL API](https://apis.io/graphqls/angellist/angellist-graphql/)
 
-**Human URL:** [https://docs.angellist.com/docs/overview](https://docs.angellist.com/docs/overview)
+#### Security (4)
 
-#### Tags:
+Authentication, trust centre, and vulnerability disclosure.
 
- - Documents, Entities, Funds, Investing, Signatures, Startups, Transactions, Venture Capital
+- [Angellist Authentication](https://apis.io/security/angellist/angellist-authentication/)
+- [Angellist Domain Security](https://apis.io/security/angellist/angellist-domain-security/)
+- [Angellist Trust Center](https://apis.io/security/angellist/angellist-trust-center/)
+- [Angellist Vulnerability Disclosure](https://apis.io/security/angellist/angellist-vulnerability-disclosure/)
 
-#### Properties
+#### OAuth scopes (1)
 
-- [Documentation](https://docs.angellist.com/docs/overview)
-- [GraphQL](https://docs.angellist.com/graphql)
-- [DataModel](https://docs.angellist.com/docs/angellist-data-model)
+The permissions the API asks for.
 
-## Common Properties
+- [Angellist Scopes](https://apis.io/scopes/angellist/angellist-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Angellist Plans Pricing](https://apis.io/plans/angellist/angellist-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Angellist Rate Limits](https://apis.io/rate-limits/angellist/angellist-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Angellist Finops](https://apis.io/finops/angellist/angellist-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.angellist.com/)
-- [Website](https://wellfound.com/)
 - [Documentation](https://docs.angellist.com/docs/overview)
-- [GraphQL](https://docs.angellist.com/graphql)
-- [DataModel](https://docs.angellist.com/docs/angellist-data-model)
-- [Documentation](https://support.angellist.com/data-room/integrations/API)
-- [GitHubOrganization](https://github.com/angellist)
-- [TermsOfService](https://venture.angellist.com/terms)
-- [PrivacyPolicy](https://venture.angellist.com/privacy)
-- [Security](https://trust-portal.angellist.com/)
+- [Getting started](https://support.angellist.com/investor-help/new/new-investor)
+- [API reference](https://docs.angellist.com/graphql)
+- [Pricing](https://www.angellist.com/pricing)
+- [Support](https://support.angellist.com/)
 - [Blog](https://www.angellist.com/blog)
-- [Support](https://help.angel.co/)
-- [X](https://x.com/angellistapi)
-- [Portal](https://www.angellist.com/private-markets/investor-portal)
-- [Announcement](https://wellfound.com/blog/angellist-talent-is-now-wellfound)
+- [Compliance](https://trust-portal.angellist.com/)
+- [Trust centre](https://trust-portal.angellist.com/)
+- [Terms of service](https://venture.angellist.com/terms)
+- [Privacy policy](https://venture.angellist.com/privacy)
+- [GitHub](https://github.com/angellist)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** API Evangelist
+**Kin Score 48.1** — developing · rubric 0.25.0 · scored 2026-10-23
 
-**Email:** info@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 92.1 |
+
+**Agent readiness 26.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/angellist/](https://apis.io/providers/angellist/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AngelList: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/angellist/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
