@@ -1,0 +1,59 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://www.angellist.com/pricing/venture-funds
+sources:
+- https://www.angellist.com/pricing/venture-funds
+- https://www.angellist.com/pricing
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: ad-valorem
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: Both plans subject to minimum fund size, plus a one-time implementation fee based on fund complexity;
+  annual costs fixed for years 1-10, billed quarterly. Add-ons priced on inquiry.
+plan_count: 2
+currency: USD
+plans:
+- name: Institutional
+  price_text: 0.1% of fund size + $10k / year
+  currency: USD
+  period: year
+  unit: fund
+  included_quota: Core fund administration for firms to flexibly manage their own fund cash or portfolio
+    operations.
+- name: Full Service
+  price_text: 0.15% of fund size + $20k / year
+  currency: USD
+  period: year
+  unit: fund
+  included_quota: Fund administration, portfolio management tools, tax and K-1 prep, and valuation support
+    included.
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Institutional
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods:
+    - year
+  - name: Full Service
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods:
+    - year
