@@ -36,7 +36,7 @@ plans:
   included_quota: Fund administration, portfolio management tools, tax and K-1 prep, and valuation support
     included.
 x-canonical:
-  generated: '2026-11-01'
+  generated: '2026-11-02'
   vocabulary: engine/economics/plans-canonical.yml
   models: []
   units: []
